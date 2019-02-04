@@ -1,0 +1,25 @@
+#+BEGIN_COMMENT
+.. title: Lint and Fluff Roller.
+.. slug: 2018-11-15-lint-and-fluff-roller
+.. date: 2018-11-15 12:02:34 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/lint_roller.jpg" class="rounded float-left"alt="Thermos"><img src="/images/lint_roller.thumbnail.jpg"></a>@@*
+
+In a house full of cats and a dog, clothes quickly get covered with various cat
+and dog hairs. Lazy people like me just ignore them. However, the female
+members of the household are much fussier :) These lint rollers are very
+effective at getting off animal hairs from your clothes.
+
+They come with a roll of "sticky tape" in perforated sections. You tear off a
+section and wrap it around the roller. The run the roller over your clothes and
+the hairs will automagically stick to it. If you stick a plastic bag over the
+roller when you have finished, you can get multiple uses from each sticky tape.
+
+[[https://amzn.to/2TA3No6][
+Amazon link]]

@@ -1,0 +1,16 @@
+#+BEGIN_COMMENT
+.. title: HDMI Sockets in Hotel Rooms
+.. slug: 2018-11-13-hdmi-sockets-in-hotel-rooms
+.. date: 2018-11-14 13:54:40 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+HDMI wall sockets in hotel rooms. No more trying to reach behind TV screens
+bolted to the wall and plug in your FireTV stick.
+
+*@@html: <a href="/images/Thermos.jpg" class="rounded float-left" alt="Thermos"><img src="/images/.IMG_20170601_172328.jpg"></a>@@*
+
+https://lh3.googleusercontent.com/-bK-Le9JpjYo/WTBCWSaeOyI/AAAAAAAAgc8/0hNARAvfN1YpY9-pLWLiGFE2jWDq2q18ACJoC/w530-h298-n-rw/IMG_20170601_172328.jpg

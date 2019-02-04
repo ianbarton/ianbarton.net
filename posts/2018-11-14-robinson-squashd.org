@@ -1,0 +1,25 @@
+
+#+BEGIN_COMMENT
+.. title: Robinson SquashD
+.. slug: 2018-11-13-robinson-squashd
+.. date: 2018-11-14 17:56:26 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/squashd.jpg" class="rounded float-left" alt="SquashD"><img src="/images/squashd.thumbnail.jpg"></a>@@*
+
+Robinson's Squash is a big UK brand of soft drinks, which you dilute with
+water. They are usually sold in bottles containing a litre of concentrate.This
+is a super concentrated version - the bottle fits into the palm of your
+hand. You need much less than a teaspoonful to add to a large glass of
+water. There is no added sugar, only what is already part of the fruit.
+
+I carry one of these with me in the car, or on my bike. It's easy to find water
+and you can make a refreshing drink without lugging a big bottle of juice with
+you.
+
+[[https://amzn.to/2RoCQHk][Amazon link.]]

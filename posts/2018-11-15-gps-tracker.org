@@ -1,0 +1,49 @@
+#+BEGIN_COMMENT
+.. title: GPS Tracker
+.. slug: 2018-11-15-gps-tracker
+.. date: 2018-11-15 11:55:52 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/gps_tracker.jpg" class="rounded float-left"alt="Thermos"><img src="/images/gps_tracker.thumbnail.jpg"></a>@@*
+
+Our dog is a working labrador, who isn't very well trained at the moment. I was
+taking him for a walk and he was on the lead as the next field had some horses
+in it. We put up a hare and I just let go of the lead (better than a dislocated
+arm). He charged through the hedge in chasing the hare. I wasn't too worried as
+the next field was ploughed and I thought I would be able to see him and
+whistle him back. However, after clambering through the barbed wire and
+blackthorn, he was nowhere to be seen and didn't respond to the whistle. It's a
+big field with thick hedges and after half an hour of looking I called out
+International Rescue in the form of my wife and daughter. Further efforts to
+find him failed miserably. Eventually, I climbed into a copse in one corner of
+the field and found him in the middle. He had done a couple of circuits of a
+tree and his flexi-lead had got wound round it. He was sitting there with a
+"What took you so long look" and hadn't bothered to bark when he was stuck.
+
+So onto the GPS tracker. It's very small and light and will easily attach to
+his harness. It works via SMS. Note it only works on 2g networks (ie not
+Three), although 3g models are available. You need a cheap PAYG SIM. You
+configure it by sending text messages. Once it' set up you can send it a text
+and it will reply with a Google maps link to its position. It can also just
+send you the Lat and Long coordinates and attempt to look up a property address
+using Google.
+
+Also, it has a motion sensor and you can configure it to send a text if it's
+moved and then log positions at regular intervals. The model I chose has a mini
+transformer, so you can power it from a car and use it as an anti theft device.
+
+There are many configurable options to alter its route tracking behavior and
+motion sleeping.  With moderate use, my unit consumed about 40% of its battery
+in 24hrs. Obviously, this depends on how many test message it sends.
+
+For a much more detailed review, I would suggest that you watch the AndroidAndy
+review on YouTube, which I'll link to in a comment.
+
+Ebay link:
+
+[[https://www.aliexpress.com/item/New-Waterproof-Collar-GPS-Tracker-Mini-Rastreador-Locator-To-Track-Location-For-Pet-Bike-Senior-Kids/32759825239.html?spm=a2g0s.9042311.0.0.VpN1Zw][Ebay link:]]

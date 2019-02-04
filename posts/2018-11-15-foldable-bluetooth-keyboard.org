@@ -1,0 +1,30 @@
+#+BEGIN_COMMENT
+.. title: Foldable Bluetooth Keyboard
+.. slug: 2018-11-15-foldable-bluetooth-keyboard
+.. date: 2018-11-15 11:51:44 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+*@@html: <a href="/images/bluetooth_keyboard.jpg" class="rounded float-left" alt="Thermos"><img src="/images/bluetooth_keyboard.thumbnail.jpg"></a>@@*
+
+I have been looking for a foldable BT keyboard for a while. Almost of my
+computer use consists of using Emacs, a terminal and the Chrome browser. Using
+the Tmux terminal emulator app, I have got Emacs to work on my Fire tablet. A
+7" screen is fine for writing and reading text. When I use Emacs, all my input
+is via the keyboard, no mouse required. However, most Emacs functions use the
+Ctrl and Alt keys in combination with another key (e.g. Ctrl-x-s for saving a
+file), which is almost impossible using an on-screen keyboard.
+
+This keyboard is robustly built, with a metal outer. The latching mechanism
+looks as though it will withstand lots of abuse. The keys themselves have a
+nice action and the spacing about the same size as my Dell XP notebook, so it's
+nice to type on.
+
+The keyboard folds down into a pocketable size. Now instead out taking my
+expensive laptop out with me, I can achieve the same functionality with a cheap
+Android tablet.
+
+[[https://amzn.to/2TEtrbl][Amazon link]]

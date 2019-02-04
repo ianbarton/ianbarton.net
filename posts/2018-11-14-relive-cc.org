@@ -1,0 +1,15 @@
+#+BEGIN_COMMENT
+.. title: Relive.cc
+.. slug: 2018-11-13-relive-cc
+.. date: 2018-11-14 13:12:06 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+At the moment this site is just a bit of fun, but I could see the idea being
+developed into all sorts of interesting uses. At the moment it takes cycling
+GPS tracks uploaded to Strava and turns them into a sort of flyover video. I
+presume it uses Google Earth. If you have uploaded some photos with your track
+it will pause at the relevant part of the track and show the photo.

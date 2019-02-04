@@ -1,0 +1,20 @@
+#+BEGIN_COMMENT
+.. title: Poundland Christmas lights Mods.
+.. slug: 2018-11-21-poundland-christmas-lights-mods
+.. date: 2018-11-21 17:44:13 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+.. youtube:: gJKy20wfIvg
+:align: center
+
+#+END_COMMENT
+Plus how to make them run from a usb charger instead of batteries. You need a
+couple of 10 ohm resistors and a soldering iron. I am definitely going to try
+this. One of those "I did it because I could" projects.
+
+
+
+{{{youtube(7_ds5XFJvPs)}}}

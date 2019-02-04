@@ -1,0 +1,25 @@
+#+BEGIN_COMMENT
+.. title: Kong Dog Toy
+.. slug: 2018-11-13-kong-dog-toy
+.. date: 2018-11-14 14:16:39 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+*@@html: <a href="/images/kong_dog_toy.jpg" class="rounded float-left"alt="Thermos"><img src="/images/kong_dog_toy.thumbnail.jpg"></a>@@*
+
+A very simple way of keeping your dog occupied for at least an hour! The Kong
+is hollow, with a hole at each end. You fill it with a mixture of dog food and
+biscuits and put it in the freezer. When it's completely frozen just give it to
+your dog. The idea is the dog can only get at the food inside the Kong with its
+tongue, so it lasts a long time.
+
+Our dog normally takes about an hour to completely empty it. The material the
+Kong is made from appears to be totally indestructible.  Our dog is capable of
+chewing his way through most materials, but the Kong is undamaged after more
+than a year.
+
+
+[[https://amzn.to/2QsDsGr][Amazon link]]

@@ -1,0 +1,22 @@
+#+BEGIN_COMMENT
+.. title: Super Glue
+.. slug: 2018-11-07-super-glue
+.. date: 2018-11-07 15:13:41 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/super_glue.jpg" class="rounded float-left"alt="Super Glue"><img src="/images/super_glue.thumbnail.jpg"></a>@@*
+
+If you have a pair of shoes that need repairing this is what you need. I used
+it to stick back the sole on one of my sons shoes a couple of months ago and it
+hasn't come unstuck yet. Apparently you can use it to build up worn heels. If
+you don't use the whole tube it can be stored in the freezer once you have
+opened it.
+
+[[https://amzn.to/2RxpJTs][Amazon link]]
+
+The same firm makes Tenacious Tape which is really um... Tenacious.

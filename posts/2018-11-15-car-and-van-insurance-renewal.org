@@ -1,0 +1,20 @@
+#+BEGIN_COMMENT
+.. title: Car and Van Insurance Renewal
+.. slug: 2018-11-15-car-and-van-insurance-renewal
+.. date: 2018-11-15 11:54:38 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+Car/Van Insurance Renewal.  This week my insurance cover for the truck expires,
+so I used GoCompare to get some quotes. The cheapest I found from Zenith was
+about £100 less than the renewal from my current company (Admiral) for the same
+level of cover.
+
+Admiral have the annoying habit of using your debit card to auto-renew your
+policy as a "Safety Measure" if you don't contact them to cancel the
+renewal. So, I rang them up to make sure they didn't auto-renew my policy and
+they somehow magically reduced their quoted renewal price to slightly less than
+the Zenith quote.

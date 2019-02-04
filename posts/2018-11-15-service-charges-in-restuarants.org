@@ -1,0 +1,18 @@
+#+BEGIN_COMMENT
+.. title: Service Charges in Restaurants
+.. slug: 2018-11-15-service-charges-in-restaurants
+.. date: 2018-11-15 12:08:16 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+Service Charges in Restaurants.  If I go to a restaurant, rather than a self
+service cafe, I can't avoid "Service". It's a non optional part of the
+experience. As such the price should be built into the price of the meal. If I
+get crap service, I simply won't go back to the same place again.
+
+I don't think any other part of the economy has such a strange idea of selling
+you something that includes a service element. If I take my car into the garage
+I don't expect to pay an extra 10% because the mechanic did their job properly.

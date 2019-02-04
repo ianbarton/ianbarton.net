@@ -1,0 +1,30 @@
+#+BEGIN_COMMENT
+.. title: LG Soundbar
+.. slug: 2018-11-13-lg-soundbar
+.. date: 2018-11-14 13:51:07 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+This seems to have disappeared from Prime in the last couple of days, but is
+available from third parties. It was £55 when I bought it on Prime a couple of
+days ago.
+
+I wanted to get a speaker that was better than the built in one in our Samsung
+TV. I didn't need something with Hi Fi quality, but just significantly better
+than the built in speakers. The LG had good reviews, although I think that the
+claimed 100W output is probably a decimal point error.
+
+Sound quality is good for TV use and OK for music, but lacking in bass. It has
+optical, jack and bluetooth inputs. The latter attracted me as part of my plan
+to have a BT speaker in every room in the house. It comes with a remote
+control, which was a bit redundant since it worked fine with the TV remote
+volume control. It paired with my phone via BT, so I can use it when nobody is
+watching the TV. There is an app on the Play Store. However, it failed
+completely to work for me and most recent reviewers. However, you don't need an
+app anyway!
+
+It's long, so check the dimensions to make sure it will fit on your cabinet
+without overhanging the ends.

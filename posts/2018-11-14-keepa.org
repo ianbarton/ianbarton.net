@@ -1,0 +1,13 @@
+#+BEGIN_COMMENT
+.. title: Keepa
+.. slug: 2018-11-13-keepa
+.. date: 2018-11-13 13:05:35 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+There several Amazon price tracker apps around. Unfortunately, every so often
+Amazon decides to block them. This one works at the moment and has a good range
+of options. However, it doesn't work with Kindle books.  https://keepa.com/
