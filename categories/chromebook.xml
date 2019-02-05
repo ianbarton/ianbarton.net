@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Mutterings. (Posts about chromebook)</title><link>https://ianbarton.net/</link><description></description><atom:link href="https://ianbarton.net/categories/chromebook.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Feb 2019 10:27:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Chromebook Tethering</title><link>https://ianbarton.net/posts/2014-02-23-Chromebook-Tethering/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+My Samsung XE303C12 Chromebook doesn't have 3g. I was wondering how I could
+tether my phone and after a bit of research found that if I simply
+plugged the phone into a USB port it was recognized as an ethernet
+device and I could tether to the phone. So I can now connect to the
+internet when there is no WiFi available.
+&lt;/p&gt;</description><category>chromebook</category><guid>https://ianbarton.net/posts/2014-02-23-Chromebook-Tethering/</guid><pubDate>Thu, 19 Oct 2017 19:15:24 GMT</pubDate></item><item><title>Chrome Text Editors</title><link>https://ianbarton.net/posts/2014-01-26-chrome-text-editors/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;div&gt;&lt;p&gt;
+My preferred text editor is Emacs. However, sometimes I maybe in a
+situation where Emacs isn't available. For example if I
+am using Chrome OS on my Samsung Chromebook.
+&lt;/p&gt;
+
+&lt;p&gt;
+I decided to look and see what cloud based editors were
+available. There are many text editor apps on the Chrome Store, but I
+wanted something that supported &lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, which reduced the field considerably.
+&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ianbarton.net/posts/2014-01-26-chrome-text-editors/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>chrome</category><category>chromebook</category><guid>https://ianbarton.net/posts/2014-01-26-chrome-text-editors/</guid><pubDate>Thu, 19 Oct 2017 19:12:37 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,30 @@
+#+BEGIN_COMMENT
+.. title: Water Filters.
+.. slug: 2018-11-13-water-filters
+.. date: 2018-11-14 13:44:17 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+*@@html: <a href="/images/travel_tap.jpg" class="rounded float-left" alt="Thermos"><img src="/images/travel_tap.thumbnail.jpg"></a>@@*
+
+
+Water Filters.  If you travel to place where you can't be sure that the water
+is safe to drink, you need a Travel Tap. It will filter out both bacteria and
+viruses. Also, it can remove most chemical contaminants. If you want more
+information about how it works, have a look at their web site. It is used by
+NGO's and the Armed Forces, so I think you can believe that it does what is
+says on the tin.
+
+Once the filter has reached the end of its life, it simply stops working and
+you can't squeeze any more water through it. So you don't need to worry if it's
+still filtering out nasties. There are several different models available, for
+different requirements.
+
+It's easy to use: just put water into the bottle and squeeze.  You need to be
+careful about cross contamination. Don't let un-purified water go into the
+container where you keep your purified water.
+
+[[https://amzn.to/2C8dgvu][Amazon link]]

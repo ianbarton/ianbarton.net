@@ -1,0 +1,24 @@
+#+BEGIN_COMMENT
+.. title: Ruffwear Dog Harness
+.. slug: 2018-11-15-ruffwear-dog-harness
+.. date: 2018-11-15 12:00:55 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+*@@html: <a href="/images/dog_harness.jpg" class="rounded float-left" alt="Thermos"><img src="/images/dog_harness.thumbnail.jpg"></a>@@*
+
+We have tried several different harnesses for our dog. This is the best we have
+found. It's easy to adjust and put on. There are two attachment points for the
+lead, so you can choose a position that suits your dog. It's a close fit, so
+your dog can squeeze under gates, or dive through hedges without getting
+stuck. There is a small ID pocket, where you can put the dog's tag, with
+his/her name and your phone number. The adjustability makes it unlikely it will
+chafe your dog.
+
+Ruffwear makes a variety of "Dog wear". I want to get him a set of panniers, so
+he can carry his own food on camping trips!
+
+[[https://amzn.to/2Tyt9CB][Amazon link]]

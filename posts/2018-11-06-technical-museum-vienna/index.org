@@ -1,0 +1,27 @@
+#+BEGIN_COMMENT
+.. title: Technical Museum Vienna
+.. slug:
+.. date: 2018-11-04 16:56:42 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+A Whatever Works Away Day at the Technical Museum in Vienna.
+https://www.technischesmuseum.at/language/en-us/home
+
+This is the best science museum I have ever visited. It focusses more on
+technology than pure science. At the moment it doesn't have any exhibits of IT
+tech, but major renovations are taking place.
+
+However, if you want to know about how just about anything else works, this is
+the place to go. It covers stuff from basic science (mass spectrometers, early
+experiments to determine the atomic weight of molecules), to heavy
+engineering. There is a Bessemer Converter, trains, machines for pressing
+steel. The list is almost endless.
+
+There is a very good children's section and lots of interactive machines to
+demonstrate various physical principles. It's huge, so you need more than one
+day if you want to explore it all.

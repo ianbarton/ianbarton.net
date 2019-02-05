@@ -1,0 +1,43 @@
+#+BEGIN_COMMENT
+.. title: Amazon Echo Dot
+.. slug: 2018-11-13-amazon-echo-dot
+.. date: 2018-11-14 13:13:32 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+Sorry for the fake Echo effect:) Got one of these for the kitchen and so far am
+impressed. As usual with Amazon stuff it came pre-setup with our account
+details, so plugged it in and connected it to the Wifi and it just worked.
+
+Voice recognition is good. We have a large kitchen and the Dot is positioned on
+a shelf near one corner. There is no problem getting it to recognise voice
+commands from 15 or 20ft away. I mainly use it to listen to various radio
+channels (using TuneIn radio) and Amazon Music. Being able to operate it purely
+with voice commands is great in a kitchen, where your hands are either wet, or
+covered in food.
+
+I haven't bothered to connect it to a bluetooth speaker yet, as the built in
+one is adequate for kitchen use. I may end up transferring our Google Play
+music subscription to a Spotify Family one, since the Dot can connect to
+Spotify, but not Google (no surprises there:) However, I find Amazon Music had
+improved recently and most stuff I want to listen to is available from there.
+
+Don't have any smart lights, so can't comment on how it works with SmartHome
+stuff. Having three children who think that light switches are don't have any
+off function, what I would like is an app that monitors the lights in each room
+they go into and then if they go out of the room without switching the light
+off, calculates the amount of electric used until someone comes along and turns
+the light off. The cost of the electricity should then be transferred directly
+out of their bank account into mine!
+
+Edit: Just found out that if you buy the Audible narration for a Kindle book,
+you can listen to it on the Echo. I haven't subscribed to Audible in the past
+because I didn't want to be tied into a subscription model. However, if you go
+to the Audible login page and log in with your Amazon account details, you can
+see and play any Audible books that you have bought together with a Kindle
+book, no subscription required. In fact it looks as though it's often cheaper
+to buy the Audible book together with the Kindle book, rather than buy the
+Audible book on its own.

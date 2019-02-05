@@ -1,0 +1,24 @@
+#+BEGIN_COMMENT
+.. title: Magnetic Knife Racks
+.. slug: 2018-11-15-magnetic-knife-racks
+.. date: 2018-11-15 11:58:14 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+*@@html: <a href="/images/magnetic_knife_rack.jpg" class="rounded float-left" alt="Thermos"><img src="/images/magnetic_knife_rack.thumbnail.jpg"></a>@@*
+
+On a recent visit to my sister in law, we noticed that she had a magnetic knife
+rack. I was slightly worried about knives falling off. However, having tried
+hanging some really heavy things from the bar, I was convinced it was safe.
+
+You just need to drill a couple of small holes in the wall and fix the metal
+backing plate. The magnetic part just clips over the mounting bar. It comes in
+several different lengths, so you can choose one that fits your available
+space. Obviously, you can also use it for things like graters and scissors that
+are made from steel. A great way to reduce the clutter in your kitchen drawers,
+making extra space to fill with even more clutter:)
+
+[[https://amzn.to/2ABwDNB][Amazon link]]

@@ -1,0 +1,32 @@
+#+BEGIN_COMMENT
+.. title: PiHole
+.. slug: 2018-11-13-pihole
+.. date: 2018-11-14 14:08:45 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+This is a very geeky item. It's basically an ad-blocker. However, it works at
+the periphery of your network, so you don't need to install anything on your
+client machines. As you might guess it will run on a RaspberryPi, but it will
+also run on just about any architecture.
+
+It works by using a blacklist of advertising sites (automatically updated) and
+replacing adverts on the web page by a single pixel. It will work with any
+mobile device connected to your WiFi without any configuration on the mobile
+device.
+
+I have installed it on a Linode VPS, together with OpenVPN. This enables me to
+use PiHole when I am using 4g. Not only are ads removed, but because this
+happens at the server end pages render faster on your device and your data
+usage is reduced. Also, as it's a VPN you can use any old dodgy wifi and know
+that you are secure.
+
+It will work on a PiZero, which costs about a fiver. The instructions on the
+web site are pretty good, so installation isn't particularly challenging.
+
+There is a nifty web interface which gives stats of the number of ads that have
+been blocked and allows you to whitelist sites if you really want to see their
+ads.  https://github.com/pi-hole/pi-hole

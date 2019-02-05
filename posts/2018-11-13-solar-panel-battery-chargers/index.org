@@ -1,0 +1,17 @@
+#+BEGIN_COMMENT
+.. title: Solar Panel Battery Chargers
+.. slug: 2018-11-13-solar-panel-battery-chargers
+.. date: 2018-11-14 14:10:11 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+I am wanting to charge a 12v Leisure battery, which is powering my Raspberry pi
+weather station. Depending on which Pi I use, it draws a maximum of 4 Watts.
+
+I thought the motorhome and caravan owners on here might have some
+recommendations. We already have a unit that is supposed to keep a battery
+connected to an electric fencer topped up. It's is almost useless, but I
+suspect is down to the power draw from the the fencer.

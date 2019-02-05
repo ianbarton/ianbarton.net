@@ -1,0 +1,17 @@
+#+BEGIN_COMMENT
+.. title: Chromebook Tethering
+.. slug: 2014-02-23-Chromebook-Tethering
+.. date: 2017-10-19 19:15:24 UTC
+.. tags: chromebook
+.. category:
+.. status:
+.. link:
+.. description:
+.. type: text
+#+END_COMMENT
+
+My Samsung XE303C12 Chromebook doesn't have 3g. I was wondering how I could
+tether my phone and after a bit of research found that if I simply
+plugged the phone into a USB port it was recognized as an ethernet
+device and I could tether to the phone. So I can now connect to the
+internet when there is no WiFi available.

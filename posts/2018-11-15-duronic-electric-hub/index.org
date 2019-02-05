@@ -1,0 +1,23 @@
+#+BEGIN_COMMENT
+.. title: Duronic Electric Hub
+.. slug: 2018-11-15-duronic-electric-hub
+.. date: 2018-11-15 12:06:58 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/duronic_hob.jpg" class="rounded float-left"alt="Thermos"><img src="/images/duronic_hob.thumbnail.jpg"></a>@@*
+
+A recent problem with our Aga means that we are without heating in the kitchen,
+clothes dryer, hot water and the ability to cook anything except by using the
+microwave. It will probably be out of action for a week or so while I run some
+new copper pipe and move the control box.
+
+The Duronic Electric Hob has two different sized rings and seems reliable so
+far. It's easy to clean and powerful enough to heat things rapidly. I think
+it's pasta with everything until the Aga is fixed:)
+
+[[https://amzn.to/2ABA5rz][Amazon link]]

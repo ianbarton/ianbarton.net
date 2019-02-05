@@ -1,0 +1,40 @@
+#+BEGIN_COMMENT
+.. title: Bread Maker
+.. slug: 2018-11-13-bread-maker
+.. date: 2018-11-13 11:40:04 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/bread_maker.jpg" class="rounded float-left" alt="Bread maker"><img src="/images/bread_maker.thumbnail.jpg"></a>@@*
+
+We have had several attempts at making our own bread, but it'sntime consuming
+and results are variable. I have often thought about buying a bread maker, but
+assumed they would be very expensive. However, looking at Amazon there are
+several available at around £50. I decided to buy one knowing it would be easy
+to return if it turned out to be a failure.
+
+I chose the Morphy Richards breadmaker on the very non scientific basis that it
+was the number one best seller on Amazon and had many positive reviews. It came
+with a very comprehensive instruction booklet. Although you can tweak lots of
+settings, for most loaves you just put in the ingredients and press "Go".
+
+It's important to measure your ingredients accurately and pay attention to the
+water temperature. Too hot and the yeast ferments too fast and the loaf will
+rise and collapse. Too cool and it won't rise enough. You do need to do some
+tweaking to the weights to get the sort of loaf you want. However, my first few
+attempts were perfectly acceptable.
+
+Total preparation time for the ingredients is about 10 minutes. Once you set it
+going it will take about three hours to bake your loaf. The whole process is
+automated, once you have placed the ingredients in the breadmaker you simply
+press go and wait for your loaf to bake.
+
+A standard loaf will cost slightly more than a pound for the ingredients. Not
+as cheap as Tesco, but much nicer! Apparently you can also bake cakes and make
+jam, but I haven't tried that yet.
+
+[[https://amzn.to/2CknZmP][Amazon link.]]

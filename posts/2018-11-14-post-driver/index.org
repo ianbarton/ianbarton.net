@@ -1,0 +1,28 @@
+#+BEGIN_COMMENT
+.. title: Silverline Post Driver.
+.. slug:
+.. date: 2018-11-13 11:44:13 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/post_driver.jpg" class="rounded float-left" alt="Post driver"><img src="/images/post_driver.thumbnail.jpg"></a>@@*
+
+Something of a niche product for most, but very useful if you need to erect a
+fence. We recently got a Labrador puppy and SWMBO wanted a stock proof fence
+putting up around the lawn so we could let it out in the garden and it wouldn't
+escape.
+
+Normally we would push the posts in using the hydraulic arm on the
+Loadall. However, big tyre tracks across the lawn would probably have resulted
+in serious disapproval from my wife. The Poat Driver is basically a big heavy
+steel tube which you put over the top of the post and wack up and down to drive
+it in. Best operated by two people. It's better than the traditional big rubber
+hammer, as you can't miss the top of the post, like you can with a hammer. I am
+sure that you can get these in your local hire shop if you think you will ever
+need to use it once.
+
+[[https://amzn.to/2CgOdqc][Amazon link.]]

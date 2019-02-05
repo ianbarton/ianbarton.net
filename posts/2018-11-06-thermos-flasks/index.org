@@ -1,0 +1,36 @@
+#+BEGIN_COMMENT
+.. title: Thermos Flasks.
+.. slug:
+.. date: 2018-11-04 16:56:42 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+
+#+END_COMMENT
+
+*@@html: <a href="/images/Thermos.jpg" class="rounded float-left" alt="Thermos"><img src="/images/Thermos.thumbnail.jpg"></a>@@*
+
+Thermos flasks are a bit like Hoovers, the brand name has become synonymous
+with the item. When I am working outside I like my hot drink. This can be tea,
+coffee or hot chocolate. However, I can't stand tea/coffee/etc that is pre-made
+and stored in the flask. I want to make it fresh using hot water from the
+flask.
+
+There are basically two designs of flask. The super cheapo option available
+from many petrol stations, which have twin walls with some sort of insulator
+between the walls. These are inevitably less use than chocolate fireguards ,
+the contents usually gets cold in a couple of hours. The more expensive flasks
+have a vacuum between the two walls and keep stuff hot much longer. However,
+there is a wide variation in performance between different makes.
+
+I have got a cupboard full of useless flasks. A couple of years ago I
+discovered the Thermos Ultimate. It's expensive, but does come with a 10 year
+warranty.
+
+In a very non scientific test I preheated mine by filling it with boiling water
+for ten minutes, pouring that out and refilling with boiling water. During the
+day I took the top off a couple of times and poured some of the contents out. I
+left the remaining contents (about half full) overnight. The next morning it
+was still too hot to stick my finger in.

@@ -1,0 +1,25 @@
+#+BEGIN_COMMENT
+.. title: Invisible Bookshelf
+.. slug: 2018-11-13-invisible-bookshelf
+.. date: 2018-11-13 13:46:15 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/lint_roller.jpg" class="rounded float-left"alt="Lint roller"><img src="/images/lint_roller.thumbnail.jpg"></a>@@*
+
+
+
+The invisible bookshelf. Not as good value as the Argos shelves reviewed on the
+last show. The usp is that you can't see the shelf once you have put some books
+on it. My daughters each have one of these above their desks and they look
+cool:) You can get quite a big stack of books on them. Some DIY skills needed
+as you need to drill some holes in your wall.
+
+They seem to be about £15 on Amazon at the moment, but I think I got mine for
+around £10, so shop around.
+
+[[https://www.amazon.co.uk/Umbra-Conceal-Floating-Shelf-Silver/dp/B000UO4KXY/ref=sr_1_2?ie=UTF8&qid=1481450473&sr=8-2&keywords=invisible+shelf][Amazon link:]]

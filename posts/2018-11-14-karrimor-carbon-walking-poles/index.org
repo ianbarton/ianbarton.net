@@ -1,0 +1,27 @@
+#+BEGIN_COMMENT
+.. title: Karrimor Carbon Walking Poles
+.. slug: 2018-11-14-karrimor-carbon-walking-poles
+.. date: 2018-11-13 13:06:57 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/walking_poles.jpg" class="rounded float-left" alt="Walking poles"><img src="/images/walking_poles.thumbnail.jpg"></a>@@*
+
+Further to Steve's review of walking poles for his Dad. I bought a pair of
+these last year for £28. I do quite a lot of mountain walking and
+climbing. Over the I years have gone through several different expensive
+poles. I prefer the flick lock design to the twist to lock, as I find it much
+less likely for the sections to slip when you put pressure on them,
+particularly when descending. So far these poles have proved robust and are as
+good as ones costing a lot more.
+
+These poles are made from carbon fibre and weigh only 190g per pole. They
+collapse into a shorter folded length than most other poles. Even if you don't
+plod up and down mountains, it's worth paying the small extra amount over the
+cheaper poles.
+
+http://www.fieldandtrek.com/karrimor-carbon-walking-poles-784002

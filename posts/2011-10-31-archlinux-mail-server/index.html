@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archlinux Mail Server | Ian's Mutterings.</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://ianbarton.net/posts/2011-10-31-archlinux-mail-server/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Ian Barton.">
+<link rel="prev" href="../2014-01-26-chrome-text-editors/" title="Chrome Text Editors" type="text/html">
+<link rel="next" href="../2014-04-22-casio-protek-battery-replacement/" title="Casio Protek Battery Replacement" type="text/html">
+<meta property="og:site_name" content="Ian's Mutterings.">
+<meta property="og:title" content="Archlinux Mail Server">
+<meta property="og:url" content="https://ianbarton.net/posts/2011-10-31-archlinux-mail-server/">
+<meta property="og:description" content="Setting up a mail server on Archlinux with virtual
+users. Using Postfix, Dovecot, SASL, postgrey, Roundcube and mailgraph.
+
+
+
+
+Home Mail Server Using ArchLinux, Postfix and Dovecot.
+
+
+This tutorial ai">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-10-19T19:13:46Z">
+<meta property="article:tag" content="arch">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                https://www.google.com/cse/
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://ianbarton.net/">
+
+            <span id="blog-title">Ian's Mutterings.</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.org" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100"></ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+            <div class="row">
+<div class="col-md-8 blog-main">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Archlinux Mail Server</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Ian Barton.
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2017-10-19T19:13:46Z" itemprop="datePublished" title="2017-10-19 19:13">2017-10-19 19:13</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.org" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>
+Setting up a mail server on Archlinux with virtual
+users. Using Postfix, Dovecot, SASL, postgrey, Roundcube and mailgraph.
+</p>
+<!-- TEASER_END -->
+
+<div id="outline-container-orgecb41d6" class="outline-2">
+<h2 id="orgecb41d6">Home Mail Server Using ArchLinux, Postfix and Dovecot.</h2>
+<div class="outline-text-2" id="text-orgecb41d6">
+<p>
+This tutorial aims to show you how to set up a mail server with
+virtual users, imap and POP3 email, spamassassin, anti-virus, postgrey
+and mail filtering. It's described as a "Home Mailserver", but it
+should be suitable for any small or medium sized business.
+</p>
+
+<p>
+I run a couple of mail servers with a small number (around five)
+users. I didn't want to give each user a Linux account, so needed
+something that let me set up virtual users. Until recently I have been
+using Ubuntu on my mail servers and have followed the excellent <a href="http://library.linode.com/email/postfix/dovecot-mysql-ubuntu-10.04-lucid">Linode</a>
+tutorial. Recently, I moved my servers to Arch Linux and wanted to
+migrate my email setup. There is an excellent tutorial on the Arch
+Wiki on setting up a <a href="https://wiki.archlinux.org/index.php/SOHO_Postfix">SOHO</a> mail server. However, it didn't quite fit my
+needs, so I ended up mixing and matching the Linode and Arch Wiki
+tutorials. This document is partly to remind me how I set things up, so
+I can do it again and I hope that it might be useful to others.
+</p>
+</div>
+
+<div id="outline-container-org096d8b3" class="outline-3">
+<h3 id="org096d8b3">Overview.</h3>
+<div class="outline-text-3" id="text-org096d8b3">
+<p>
+Virtual users are stored in a MySQL database and are managed using the
+<a href="http://postfixadmin.sourceforge.net/">PostfixAdmin</a> web based interface. Postfix is used as a Mail Transfer
+Agent (MTA), but mail is delivered locally using Dovecot as the Local
+Delivery Agent (LDA). This allows me to use Dovecot's Pigeonhole mail
+filtering system to direct mail to an appropriate IMAP folder.
+</p>
+
+<p>
+Sending and receiving email is secured via SSL and the server offers
+SMTP auth, so users can send email, but spammers can't use the system
+as a relay.
+</p>
+
+<p>
+Spam is controlled using the <a href="http://postgrey.schweikert.ch/">Postgrey</a> Postfix policy server. From the
+Postgrey web site:
+</p>
+
+<p>
+"When a request for delivery of a mail is received by Postfix via
+SMTP, the triplet CLIENT<sub>IP</sub> / SENDER / RECIPIENT is built. If it is
+the first time that this triplet is seen, or if the triplet was first
+seen, less than 5 minutes ago, then the mail gets rejected with a
+temporary error. Hopefully spammers or viruses will not try again
+later, as it is however required per RFC."
+</p>
+
+<p>
+I find that this removes almost all spam from my system and it isn't
+worth the extra overhead of running spamassassin. If you want to run
+spamassassin and clamav you will probably need to install <a href="http://www.ijs.si/software/amavisd/">amavisd-new</a> .
+</p>
+
+<p>
+I have also provided some instructions for installing the <a href="http://roundcube.net">RoundCube</a>
+web mail client. Note this tutorial doesn't explain how to set up a
+working Apache server.
+</p>
+
+<p>
+You may want to  monitor how many emails are being sent and received,
+plus monitor the number of emails that are rejected as spam. The
+<a href="http://mailgraph.schweikert.ch/">mailgraph</a> package is an easy to install package that produces daily,
+weekly, monthly and yearly graphs of received/sent and
+bounced/rejected mail.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5c9400d" class="outline-3">
+<h3 id="org5c9400d">Using This File.</h3>
+<div class="outline-text-3" id="text-org5c9400d">
+<p>
+The original file for the html page was written using Emacs <a href="http://orgmode.org">org-mode</a>
+and is available from <a href="https://github.com/geekinthesticks/ArchLinux-Mail-Server">Github</a> . If you are using Emacs and have enabled
+<a href="http://orgmode.org/manual/release_7.7/Library-of-Babel.html#Library-of-Babel">the Library of Babel</a> you can generate all the configuration files from
+this file using the key sequence "C-c C-v t". The Github repo also
+contains the pre-generated configuration files.
+</p>
+
+<p>
+If you want to get the most up to date version of this tutorial you
+should always use the version available on Githum.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fb0425" class="outline-3">
+<h3 id="org2fb0425">Installation.</h3>
+<div class="outline-text-3" id="text-org2fb0425">
+<div class="highlight"><pre><span></span>pacman -S php mysql apache postfix dovecot <span class="se">\</span>
+ squirrelmail spamassassin pigeonhole <span class="se">\</span>
+postgrey cyrus-sasl cyrus-sasl-plugins pam_mysql
+</pre></div>
+
+
+<p>
+PostfixAdmin is available from <a href="https://aur.archlinux.org/packages.php?ID=28103">AUR</a> . Install the package in the usual
+way. You need to edit the configuration file in
+/usr/share/webapps/postfixAdmin/config.inc.php. The sections you
+probably need to edit are shown below:
+</p>
+
+<div class="highlight"><pre><span></span><span class="nv">$CONF</span><span class="o">[</span><span class="s1">'configured'</span><span class="o">]</span> <span class="o">=</span> true<span class="p">;</span>
+// Database Config
+// <span class="nv">mysql</span> <span class="o">=</span> MySQL <span class="m">3</span>.23 and <span class="m">4</span>.0, <span class="m">4</span>.1 or <span class="m">5</span>
+// <span class="nv">mysqli</span> <span class="o">=</span> MySQL <span class="m">4</span>.1+
+// <span class="nv">pgsql</span> <span class="o">=</span> PostgreSQL
+
+
+<span class="nv">$CONF</span><span class="o">[</span><span class="s1">'database_type'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'mysql'</span><span class="p">;</span>
+<span class="nv">$CONF</span><span class="o">[</span><span class="s1">'database_host'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'localhost'</span><span class="p">;</span>
+<span class="nv">$CONF</span><span class="o">[</span><span class="s1">'database_user'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'postfix'</span><span class="p">;</span>
+<span class="nv">$CONF</span><span class="o">[</span><span class="s1">'database_password'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'YourPassword'</span><span class="p">;</span>
+<span class="nv">$CONF</span><span class="o">[</span><span class="s1">'database_name'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'postfix'</span><span class="p">;</span>
+
+// Mailboxes
+// If you want to store the mailboxes per domain <span class="nb">set</span> this to <span class="s1">'YES'</span>.
+// Examples:
+//   YES: /usr/local/virtual/domain.tld/username@domain.tld
+//   NO:  /usr/local/virtual/username@domain.tld
+<span class="nv">$CONF</span><span class="o">[</span><span class="s1">'domain_path'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">'YES'</span><span class="p">;</span>
+
+// If you don<span class="s1">'t want to have the domain in your mailbox set this to '</span>NO<span class="s1">'.</span>
+<span class="s1">// Examples:</span>
+<span class="s1">//   YES: /usr/local/virtual/domain.tld/username@domain.tld</span>
+<span class="s1">//   NO:  /usr/local/virtual/domain.tld/username</span>
+<span class="s1">// Note: If $CONF['</span>domain_path<span class="s1">'] is set to NO, this setting will be forced to YES.</span>
+<span class="s1">$CONF['</span>domain_in_mailbox<span class="s1">'] = '</span>NO<span class="s1">';</span>
+
+<span class="s1">// If you want to define your own function to generate a maildir path set this to the name of the function.</span>
+<span class="s1">// Notes:</span>
+<span class="s1">//   - this configuration directive will override both domain_path and domain_in_mailbox</span>
+<span class="s1">//   - the maildir_name_hook() function example is present below, commented out</span>
+<span class="s1">//   - if the function does not exist the program will default to the above domain_path and domain_in_mailbox settings</span>
+<span class="s1">$CONF['</span>maildir_name_hook<span class="s1">'] = '</span>NO<span class="err">'</span><span class="p">;</span>
+</pre></div>
+
+
+<p>
+Note that this tutorial assumes that your mail will be stored in
+/home/vmail/yourdomain.com/yourname/Maildir
+</p>
+
+<p>
+You will also need to configure Apache. Putting something like:
+</p>
+
+<div class="highlight"><pre><span></span>  Alias /postfixAdmin <span class="s2">"/usr/share/webapps/postfixAdmin"</span>
+&lt;Directory <span class="s2">"/usr/share/webapps/postfixAdmin"</span>&gt;
+	AllowOverride All
+	Options FollowSymlinks
+	Order allow,deny
+	Allow from all
+&lt;/Directory&gt;
+</pre></div>
+
+<p>
+in your httpd.conf will allow you to access PostfixAdmin. Now visit
+the setu page:
+</p>
+
+<div class="highlight"><pre><span></span>http://yourdomain.com/postfixAdmin/setup.php
+</pre></div>
+
+<p>
+This will allow you to setup the database and generate a password
+which must be pasted into config.inc.php:
+</p>
+
+<div class="highlight"><pre><span></span><span class="nv">$CONF</span><span class="o">[</span><span class="s1">'setup_password'</span><span class="o">]</span> <span class="o">=</span> <span class="s1">''</span>
+</pre></div>
+
+<p>
+When you have finished set:
+</p>
+
+<div class="highlight"><pre><span></span><span class="nv">$CONF</span><span class="o">[</span><span class="s1">'configured'</span><span class="o">]</span> <span class="o">=</span> true<span class="p">;</span>
+</pre></div>
+
+<p>
+You should now be able to access the PostfixAdmin web interface, but
+don't start setting up domains and users yet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0937c04" class="outline-3">
+<h3 id="org0937c04">Creating the vmail User.</h3>
+<div class="outline-text-3" id="text-org0937c04">
+<p>
+All mail is stored in Maildir format under
+/home/vmail/yourdomain.com/username/Maidir.
+</p>
+
+<p>
+Create the vmail user and group and set appropriate permissions on
+the vmail directory:
+</p>
+
+<div class="highlight"><pre><span></span>groupadd -g <span class="m">5000</span> vmail
+useradd -u <span class="m">5000</span> -g vmail -s /sbin/nologin -d /home/vmail -m vmail
+chmod <span class="m">750</span> /home/vmail
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgd4efde5" class="outline-3">
+<h3 id="orgd4efde5">Generate a Self Signed SSL Certificate.</h3>
+<div class="outline-text-3" id="text-orgd4efde5">
+<p>
+Sending and receiving mail is secured using SSL. You need to generate
+a certificate. The code below generates a certificate valid for 365
+days. Initially the certificate is protected via a
+pass phrase. However, you will need to remove this, as described, in
+order for the system to work without continually prompting you to
+enter the pass phrase.
+</p>
+
+<div class="highlight"><pre><span></span><span class="nb">cd</span> /etc/ssl/certs
+openssl req -new -x509 -newkey rsa:1024 -days <span class="m">365</span> -keyout server.key -out server.crt
+</pre></div>
+
+<p>
+When asked to ad a "Common Name" this should be the FQDN of your mail
+server e.g. "mail.mydomain.com". The process will ask you to enter a
+pass phrase. Choose a short easy one as we shall remove it in the next
+step.
+</p>
+
+<p>
+Remove the pass phrase:
+</p>
+
+<div class="highlight"><pre><span></span>openssl rsa -in server.key -out server.key
+</pre></div>
+
+
+<p>
+Now set permissions on the keys:
+</p>
+
+<div class="highlight"><pre><span></span>chown nobody:nobody server.key
+chmod <span class="m">600</span> server.key
+mv server.key /etc/ssl/private/
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org8968d2c" class="outline-3">
+<h3 id="org8968d2c">Dovecot.</h3>
+<div class="outline-text-3" id="text-org8968d2c">
+<p>
+This article assumes that you are using at least Dovecot 2.0 or later, which is the
+default in Arch. Dovecot has many configuration options, which are
+well commented in the default dovecot.conf. I have just given values
+for the options that are essential to get the system working.
+</p>
+
+<p>
+I want to use the sieve protocol to deliver mail to particular imap
+folders. The sieve plugin in Dovecot 1.0 has been replaced by
+<a href="http://pigeonhole.dovecot.org/">pigeonhole</a> which now provides sieve support.
+</p>
+
+<p>
+If you want to use sieve to sort your email you must make sure that
+you use Dovecot, not Postfix, as the LDA. In addition to the section
+in dovecot.conf, pay particular attention to the section in postfix
+master.cf which uses Dovecot as the LDA.
+</p>
+
+<p>
+There are two configuration files for Dovecot, dovecot.conf and
+dovecot-sql.conf. Dovecot is setup to deliver mail to:
+</p>
+
+<div class="highlight"><pre><span></span>/home/vmail/domain.com/user/Maildir
+</pre></div>
+
+<p>
+This allows me to place the Sieve filter scripts in "/home/vmail/domain.com/user" outside the user's Maildir.
+</p>
+</div>
+
+<div id="outline-container-org75a808c" class="outline-4">
+<h4 id="org75a808c">dovecot.conf</h4>
+<div class="outline-text-4" id="text-org75a808c">
+<div class="highlight"><pre><span></span><span class="nv">protocols</span> <span class="o">=</span> imap sieve
+<span class="nv">ssl</span> <span class="o">=</span> yes
+<span class="nv">ssl_cert</span> <span class="o">=</span> &lt;/etc/ssl/certs/mail2.wilkesley.net.crt
+<span class="nv">ssl_key</span> <span class="o">=</span> &lt;/etc/ssl/private/mail2.wilkesley.net.key
+<span class="nv">first_valid_uid</span> <span class="o">=</span> <span class="m">5000</span>
+<span class="nv">first_valid_gid</span> <span class="o">=</span> <span class="m">5000</span>
+<span class="nv">auth_username_chars</span> <span class="o">=</span> abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890.-_@
+
+namespace <span class="o">{</span>
+    <span class="nv">location</span> <span class="o">=</span> maildir:/home/vmail/%d/%n/Maildir
+    <span class="nb">type</span> <span class="o">=</span> private
+    <span class="nv">prefix</span> <span class="o">=</span> INBOX.
+    <span class="nv">inbox</span> <span class="o">=</span> yes
+    <span class="nv">hidden</span> <span class="o">=</span> yes
+<span class="o">}</span>
+
+service auth <span class="o">{</span>
+
+    unix_listener auth-userdb <span class="o">{</span>
+	<span class="nv">mode</span> <span class="o">=</span> <span class="m">0600</span>
+	<span class="nv">user</span> <span class="o">=</span> vmail <span class="c1"># User running dovecot-lda</span>
+	<span class="c1">#group = vmail # Or alternatively mode 0660 + dovecot-lda user in this group</span>
+      <span class="o">}</span>
+<span class="o">}</span>
+
+
+passdb  <span class="o">{</span>
+    <span class="nv">driver</span><span class="o">=</span>sql
+    <span class="nv">args</span> <span class="o">=</span> /etc/dovecot/dovecot-sql.conf
+<span class="o">}</span>
+
+userdb  <span class="o">{</span>
+    <span class="nv">driver</span><span class="o">=</span>static
+    <span class="nv">args</span> <span class="o">=</span> <span class="nv">uid</span><span class="o">=</span><span class="m">5000</span> <span class="nv">gid</span><span class="o">=</span><span class="m">5000</span> <span class="nv">home</span><span class="o">=</span>/home/vmail/%d/%n <span class="nv">allow_all_users</span><span class="o">=</span>yes
+<span class="o">}</span>
+
+
+protocol imap <span class="o">{</span>
+  <span class="nv">imap_client_workarounds</span> <span class="o">=</span> delay-newmail tb-extra-mailbox-sep
+<span class="o">}</span>
+protocol lda <span class="o">{</span>
+
+    <span class="nv">postmaster_address</span> <span class="o">=</span> ian@wilkesley.net
+    <span class="nv">hostname</span> <span class="o">=</span> wilkesley.org
+    <span class="nv">sendmail_path</span> <span class="o">=</span> /usr/sbin/sendmail
+    <span class="nv">mail_plugins</span> <span class="o">=</span> <span class="nv">$mail_plugins</span> sieve
+    <span class="nv">log_path</span> <span class="o">=</span> /var/log/dovecot-lda-errors.log
+    <span class="nv">info_log_path</span> <span class="o">=</span> /var/log/dovecot-lda.log
+<span class="o">}</span>
+
+protocol sieve <span class="o">{</span>
+
+<span class="c1"># Defaults are OK, so nothing in this section.</span>
+
+<span class="o">}</span>
+
+plugin <span class="o">{</span>
+  <span class="nv">sieve</span> <span class="o">=</span> ~/.dovecot.sieve
+  <span class="nv">sieve_global_path</span> <span class="o">=</span> /home/vmail/globalsieverc
+  <span class="nv">sieve_dir</span> <span class="o">=</span> ~/
+<span class="o">}</span>
+
+ passdb <span class="o">{</span>
+   <span class="nv">driver</span> <span class="o">=</span> sql
+   <span class="nv">args</span> <span class="o">=</span> /etc/dovecot/dovecot-sql.conf
+ <span class="o">}</span>
+ userdb <span class="o">{</span>
+   <span class="nv">driver</span> <span class="o">=</span> sql
+   <span class="nv">args</span> <span class="o">=</span> /etc/dovecot/dovecot-sql.conf
+ <span class="o">}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org0542689" class="outline-4">
+<h4 id="org0542689">dovecot-sql.conf</h4>
+<div class="outline-text-4" id="text-org0542689">
+<div class="highlight"><pre><span></span><span class="nv">driver</span> <span class="o">=</span> mysql
+
+<span class="nv">connect</span> <span class="o">=</span> <span class="nv">host</span><span class="o">=</span>localhost <span class="nv">dbname</span><span class="o">=</span>postfix <span class="nv">user</span><span class="o">=</span>postfix <span class="nv">password</span><span class="o">=</span>YourPassword
+<span class="nv">default_pass_scheme</span> <span class="o">=</span> CRYPT
+
+<span class="nv">user_query</span> <span class="o">=</span> SELECT maildir AS mail, <span class="m">5000</span> AS uid, <span class="m">5000</span> AS gid, <span class="s2">"/home/vmail/%d/%n/Maildir"</span> AS home FROM mailbox WHERE <span class="nv">username</span> <span class="o">=</span> <span class="s1">'%u'</span> AND <span class="nv">active</span> <span class="o">=</span> <span class="s1">'1'</span>
+<span class="nv">password_query</span> <span class="o">=</span> SELECT password FROM mailbox WHERE <span class="nv">username</span> <span class="o">=</span> <span class="s1">'%u'</span> AND <span class="nv">active</span> <span class="o">=</span> <span class="s1">'1'</span>
+</pre></div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org05968ca" class="outline-4">
+<h4 id="org05968ca">Checking that Dovecot is Working.</h4>
+<div class="outline-text-4" id="text-org05968ca">
+<p>
+You can check the Dovecot and sieve are installed correctly using
+gnutls-cli. Note that port 4190 is the default port for sieve.
+</p>
+
+<div class="highlight"><pre><span></span>ian:~/ $ gnutls-cli --starttls -p <span class="m">4190</span> mail2.wilkesley.net                                                         <span class="o">[</span><span class="m">7</span>:25:42<span class="o">]</span>
+Resolving <span class="s1">'mail2.wilkesley.net'</span>...
+Connecting to <span class="s1">'127.0.0.1:4190'</span>...
+
+- Simple Client Mode:
+
+<span class="s2">"IMPLEMENTATION"</span> <span class="s2">"Dovecot Pigeonhole"</span>
+<span class="s2">"SIEVE"</span> <span class="s2">"fileinto reject envelope encoded-character vacation subaddress comparator-i;ascii-numeric relational regex imap4flags copy include variables body enotify environment mailbox date ihave"</span>
+<span class="s2">"NOTIFY"</span> <span class="s2">"mailto"</span>
+<span class="s2">"SASL"</span> <span class="s2">"PLAIN"</span>
+<span class="s2">"STARTTLS"</span>
+<span class="s2">"VERSION"</span> <span class="s2">"1.0"</span>
+OK <span class="s2">"Dovecot ready."</span>
+</pre></div>
+
+<p>
+now enter "STARTTLS":
+</p>
+
+<div class="highlight"><pre><span></span>STARTTLS
+OK <span class="s2">"Begin TLS negotiation now."</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge22f80f" class="outline-3">
+<h3 id="orge22f80f">Postfix.</h3>
+<div class="outline-text-3" id="text-orge22f80f">
+<p>
+Postfix has many options. The configuration shown below should be
+sufficient to get you started. However, I recommend studying all the
+options available.
+</p>
+</div>
+<div id="outline-container-org98332b4" class="outline-4">
+<h4 id="org98332b4">main.cf</h4>
+<div class="outline-text-4" id="text-org98332b4">
+<div class="highlight"><pre><span></span><span class="nv">soft_bounce</span> <span class="o">=</span> yes
+<span class="nv">queue_directory</span> <span class="o">=</span> /var/spool/postfix
+<span class="nv">command_directory</span> <span class="o">=</span> /usr/sbin
+<span class="nv">daemon_directory</span> <span class="o">=</span> /usr/lib/postfix
+<span class="nv">data_directory</span> <span class="o">=</span> /var/lib/postfix
+<span class="nv">mail_owner</span> <span class="o">=</span> postfix
+
+
+<span class="nv">unknown_local_recipient_reject_code</span> <span class="o">=</span> <span class="m">550</span>
+
+<span class="nv">alias_maps</span> <span class="o">=</span> hash:/etc/postfix/aliases
+
+<span class="nv">alias_database</span> <span class="o">=</span> <span class="nv">$alias_maps</span>
+
+<span class="nv">debug_peer_level</span> <span class="o">=</span> <span class="m">2</span>
+
+<span class="nv">debugger_command</span> <span class="o">=</span>
+	 <span class="nv">PATH</span><span class="o">=</span>/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
+	 ddd <span class="nv">$daemon_directory</span>/<span class="nv">$process_name</span> <span class="nv">$process_id</span> <span class="p">&amp;</span> sleep <span class="m">5</span>
+
+<span class="nv">sendmail_path</span> <span class="o">=</span> /usr/sbin/sendmail
+
+<span class="nv">newaliases_path</span> <span class="o">=</span> /usr/bin/newaliases
+
+<span class="nv">mailq_path</span> <span class="o">=</span> /usr/bin/mailq
+
+<span class="nv">setgid_group</span> <span class="o">=</span> postdrop
+
+<span class="nv">html_directory</span> <span class="o">=</span> no
+
+<span class="nv">manpage_directory</span> <span class="o">=</span> /usr/share/man
+
+<span class="nv">sample_directory</span> <span class="o">=</span> /etc/postfix/sample
+
+<span class="nv">readme_directory</span> <span class="o">=</span> no
+
+<span class="nv">myhostname</span> <span class="o">=</span> your_host_name
+
+<span class="nv">mydestination</span> <span class="o">=</span> localhost, yourmailserver@yourdomain.com
+
+<span class="c1"># You may want to modify this netmask to accept email from</span>
+<span class="c1"># your internal network, but not the Internet.</span>
+<span class="nv">mynetworks</span> <span class="o">=</span> <span class="m">127</span>.0.0.0/8 <span class="o">[</span>::ffff:127.0.0.0<span class="o">]</span>/104 <span class="o">[</span>::1<span class="o">]</span>/128
+
+<span class="nv">mynetworks_style</span> <span class="o">=</span> host
+
+<span class="c1"># Max size in bytes which users cans send messages.</span>
+<span class="nv">message_size_limit</span> <span class="o">=</span> <span class="m">50720000</span>
+
+
+<span class="c1"># Virtual Mailbox Domain Settings</span>
+<span class="nv">virtual_alias_maps</span> <span class="o">=</span> mysql:/etc/postfix/mysql_virtual_alias_maps.cf
+<span class="nv">virtual_mailbox_domains</span> <span class="o">=</span> mysql:/etc/postfix/mysql_virtual_domains_maps.cf
+<span class="nv">virtual_mailbox_maps</span> <span class="o">=</span> mysql:/etc/postfix/mysql_virtual_mailbox_maps.cf
+<span class="nv">virtual_mailbox_limit</span> <span class="o">=</span> <span class="m">51200000</span>
+<span class="nv">virtual_minimum_uid</span> <span class="o">=</span> <span class="m">5000</span>
+<span class="nv">virtual_uid_maps</span> <span class="o">=</span> static:5000
+<span class="nv">virtual_gid_maps</span> <span class="o">=</span> static:5000
+<span class="nv">virtual_mailbox_base</span> <span class="o">=</span> /home/vmail
+<span class="nv">virtual_transport</span> <span class="o">=</span> dovecot
+
+<span class="c1">#virtual_transport = dovecot</span>
+<span class="c1"># Additional for quota support</span>
+<span class="nv">virtual_create_maildirsize</span> <span class="o">=</span> yes
+<span class="nv">virtual_mailbox_extended</span> <span class="o">=</span> yes
+<span class="nv">virtual_mailbox_limit_maps</span> <span class="o">=</span> mysql:/etc/postfix/mysql_virtual_mailbox_limit_maps.cf
+<span class="nv">virtual_mailbox_limit_override</span> <span class="o">=</span> yes
+<span class="nv">virtual_maildir_limit_message</span> <span class="o">=</span> Sorry, the your maildir has overdrawn your diskspace quota, please free up some of spaces of your mailbox try again.
+<span class="nv">virtual_overquota_bounce</span> <span class="o">=</span> yes
+
+
+<span class="nv">smtpd_sasl_auth_enable</span> <span class="o">=</span> yes
+<span class="nv">smtpd_sasl_security_options</span> <span class="o">=</span> noanonymous
+<span class="nv">smtpd_sasl_tls_security_options</span> <span class="o">=</span> <span class="nv">$smtpd_sasl_security_options</span>
+<span class="nv">smtpd_tls_auth_only</span> <span class="o">=</span> no
+<span class="nv">smtpd_tls_cert_file</span> <span class="o">=</span> /etc/ssl/certs/mail2.wilkesley.net.crt
+<span class="nv">smtpd_tls_key_file</span> <span class="o">=</span> /etc/ssl/private/mail2.wilkesley.net.key
+<span class="nv">smtpd_sasl_local_domain</span> <span class="o">=</span> <span class="nv">$mydomain</span>
+<span class="nv">broken_sasl_auth_clients</span> <span class="o">=</span> yes
+<span class="nv">smtpd_tls_loglevel</span> <span class="o">=</span> <span class="m">1</span>
+
+<span class="nv">smtpd_sasl_authenticated_header</span> <span class="o">=</span> yes
+<span class="nv">smtpd_use_tls</span> <span class="o">=</span> yes
+<span class="nv">smtpd_sasl_auth_enable</span> <span class="o">=</span> yes
+
+
+
+<span class="c1"># See the section about postgrey for an explanation of</span>
+<span class="c1"># these settings.</span>
+<span class="nv">smtpd_recipient_restrictions</span> <span class="o">=</span>
+  permit_mynetworks,
+  permit_sasl_authenticated,
+  reject_unauth_destination,
+  reject_invalid_hostname,
+  reject_unauth_pipelining,
+  reject_unknown_sender_domain,
+  reject_rbl_client zen.spamhaus.org,
+  reject_rbl_client list.dsbl.org,
+  reject_rbl_client bl.spamcop.net,
+  check_policy_service inet:127.0.0.1:10030
+
+<span class="c1"># Make postfix log recipient names when rejecting an address.</span>
+<span class="nv">smtpd_delay_reject</span> <span class="o">=</span> yes
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orge693b93" class="outline-4">
+<h4 id="orge693b93">master.cf</h4>
+<div class="outline-text-4" id="text-orge693b93">
+<div class="highlight"><pre><span></span><span class="c1">#628       inet  n       -       n       -       -       qmqpd</span>
+pickup    fifo  n       -       n       <span class="m">60</span>      <span class="m">1</span>       pickup
+cleanup   unix  n       -       n       -       <span class="m">0</span>       cleanup
+qmgr      fifo  n       -       n       <span class="m">300</span>     <span class="m">1</span>       qmgr
+<span class="c1">#qmgr     fifo  n       -       n       300     1       oqmgr</span>
+tlsmgr    unix  -       -       n       <span class="m">1000</span>?   <span class="m">1</span>       tlsmgr
+rewrite   unix  -       -       n       -       -       trivial-rewrite
+bounce    unix  -       -       n       -       <span class="m">0</span>       bounce
+defer     unix  -       -       n       -       <span class="m">0</span>       bounce
+trace     unix  -       -       n       -       <span class="m">0</span>       bounce
+verify    unix  -       -       n       -       <span class="m">1</span>       verify
+flush     unix  n       -       n       <span class="m">1000</span>?   <span class="m">0</span>       flush
+proxymap  unix  -       -       n       -       -       proxymap
+proxywrite unix -       -       n       -       <span class="m">1</span>       proxymap
+smtp      unix  -       -       n       -       -       smtp
+<span class="c1"># When relaying mail as backup MX, disable fallback_relay to avoid MX loops</span>
+relay     unix  -       -       n       -       -       smtp
+	-o <span class="nv">smtp_fallback_relay</span><span class="o">=</span>
+<span class="c1">#       -o smtp_helo_timeout=5 -o smtp_connect_timeout=5</span>
+showq     unix  n       -       n       -       -       showq
+error     unix  -       -       n       -       -       error
+retry     unix  -       -       n       -       -       error
+discard   unix  -       -       n       -       -       discard
+<span class="nb">local</span>     unix  -       n       n       -       -       <span class="nb">local</span>
+virtual   unix  -       n       n       -       -       virtual
+lmtp      unix  -       -       n       -       -       lmtp
+anvil     unix  -       -       n       -       <span class="m">1</span>       anvil
+scache    unix  -       -       n       -       <span class="m">1</span>       scache
+
+<span class="c1"># Workaround for smtps not being a valid service name.</span>
+<span class="m">465</span> inet n - n - - smtpd -o <span class="nv">smtpd_tls_wrappermode</span><span class="o">=</span>yes -o <span class="nv">smtpd_sasl_auth_enable</span><span class="o">=</span>yes
+
+
+<span class="c1"># Dovecot is acting as the LDA.</span>
+dovecot   unix  -       n       n       -       -       pipe
+    <span class="nv">flags</span><span class="o">=</span>DRhu <span class="nv">user</span><span class="o">=</span>vmail:vmail <span class="nv">argv</span><span class="o">=</span>/usr/lib/dovecot/deliver -d <span class="si">${</span><span class="nv">recipient</span><span class="si">}</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgf8c7d54" class="outline-4">
+<h4 id="orgf8c7d54">mysql<sub>virtual</sub><sub>maps.cf</sub>
+</h4>
+<div class="outline-text-4" id="text-orgf8c7d54">
+<div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
+<span class="nv">password</span> <span class="o">=</span> YourPassword
+<span class="nv">hosts</span> <span class="o">=</span> localhost
+<span class="nv">dbname</span> <span class="o">=</span> postfix
+<span class="nv">table</span> <span class="o">=</span> <span class="nb">alias</span>
+<span class="nv">select_field</span> <span class="o">=</span> goto
+<span class="nv">where_field</span> <span class="o">=</span> address
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org1c07edf" class="outline-4">
+<h4 id="org1c07edf">mysql<sub>virtual</sub><sub>domains</sub><sub>maps.cf</sub>
+</h4>
+<div class="outline-text-4" id="text-org1c07edf">
+<div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
+<span class="nv">password</span> <span class="o">=</span> YourPassword
+<span class="nv">hosts</span> <span class="o">=</span> localhost
+<span class="nv">dbname</span> <span class="o">=</span> postfix
+<span class="nv">table</span> <span class="o">=</span> domain
+<span class="nv">select_field</span> <span class="o">=</span> domain
+<span class="nv">where_field</span> <span class="o">=</span> domain
+<span class="c1">#additional_conditions = and backupmx = '0' and active = '1'</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org3ed9d44" class="outline-4">
+<h4 id="org3ed9d44">mysql<sub>virtual</sub><sub>mailbox</sub><sub>limit</sub><sub>maps.cf</sub>
+</h4>
+<div class="outline-text-4" id="text-org3ed9d44">
+<div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
+<span class="nv">password</span> <span class="o">=</span> YourPassword
+<span class="nv">hosts</span> <span class="o">=</span> localhost
+<span class="nv">dbname</span> <span class="o">=</span> postfix
+<span class="nv">table</span> <span class="o">=</span> mailbox
+<span class="nv">select_field</span> <span class="o">=</span> quota
+<span class="nv">where_field</span> <span class="o">=</span> username
+<span class="c1">#additional_conditions = and active = '1'</span>
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orgb78d87c" class="outline-4">
+<h4 id="orgb78d87c">mysql<sub>virtual</sub><sub>mailbox</sub><sub>maps.cf</sub>
+</h4>
+<div class="outline-text-4" id="text-orgb78d87c">
+<div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
+<span class="nv">password</span> <span class="o">=</span> YourPassword
+<span class="nv">hosts</span> <span class="o">=</span> localhost
+<span class="nv">dbname</span> <span class="o">=</span> postfix
+
+<span class="nv">query</span> <span class="o">=</span> SELECT CONCAT<span class="o">(</span>maildir,<span class="s1">'Maildir/'</span><span class="o">)</span> FROM mailbox WHERE <span class="nv">username</span> <span class="o">=</span> <span class="s1">'%s'</span>
+</pre></div>
+</div>
+</div>
+
+
+<div id="outline-container-org46aff5f" class="outline-4">
+<h4 id="org46aff5f">Postgrey.</h4>
+<div class="outline-text-4" id="text-org46aff5f">
+<p>
+You can use Postgrey in combination with a number of other settings in
+Postfix to greatly reduce the amount of spam you receive. I find that
+taking these steps prevents almost all spam and I don't need to run
+spamassassin, which is a resource hog.
+</p>
+
+<p>
+The configuration file for postgrey is /etc/conf.d/postgrey. You might
+want to reduce the default delay for unrecognised email from 5 minutes to
+1 minute, although I stick with the default.
+</p>
+
+<p>
+You should then add the check<sub>policy</sub><sub>service</sub> option to your Postfix
+main.cf:
+</p>
+
+<div class="highlight"><pre><span></span><span class="nv">smtpd_recipient_restrictions</span> <span class="o">=</span>
+ permit_mynetworks,      <span class="c1"># Allow mail from our own network</span>
+ permit_sasl_authenticated, <span class="c1"># Allow mail from smtp authenticated clients</span>
+ reject_unauth_destination, <span class="c1"># Reject any email that has invalid</span>
+ reject_invalid_hostname,   <span class="c1"># options.</span>
+ reject_unauth_pipelining,
+ reject_unknown_sender_domain, <span class="c1"># We don't want mail from unknown domains</span>
+ reject_rbl_client zen.spamhaus.org, <span class="c1"># Check email against various</span>
+ reject_rbl_client list.dsbl.org,    <span class="c1"># on line black lists.</span>
+ reject_rbl_client bl.spamcop.net,
+ check_policy_service inet:127.0.0.1:10030 <span class="c1"># Postgrey</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org32ea381" class="outline-3">
+<h3 id="org32ea381">Filtering Mail with Sieve.</h3>
+<div class="outline-text-3" id="text-org32ea381">
+<p>
+Sieve support for Dovecot is now provided by <a href="http://http//pigeonhole.dovecot.org/">pigeonhole</a> . Sieve allows
+you to write scripts that customize mail delivery. You can forward or
+store messages in special folders (useful for mailing lists and cron
+messages). If there is an error in your script, the worst that can
+happen is that the mail ends up in your Inbox instead of being sent
+elsewhere.
+</p>
+
+<p>
+By default sieve scripts are defined in ~/.dovecot-sieve. See <a href="http://wiki.dovecot.org/LDA/Sieve">this</a>
+site for many examples of sieve scripts. You can also use
+<a href="http://libsieve-php.sourceforge.net/">http://libsieve-php.sourceforge.net/</a> to validate your sieve script.
+</p>
+
+<p>
+I have configured Dovecot to use sieve scripts stored in the vmail user's
+home directory e.g. <i>home/vmail/wilkesley.org/ian</i>.dovecot.sieve. If
+you want users to be able to create their own scripts, you will need
+to give them write permission to this directory.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8eb8339" class="outline-3">
+<h3 id="org8eb8339">SMTP-AUTH and saslauthd.</h3>
+<div class="outline-text-3" id="text-org8eb8339">
+<p>
+Smtp-auth ensures that your users can send email, but your mail server
+isn't an open relay. Users who are authenticated with their login
+email address and password may use the smtp server to send mail.
+</p>
+
+<p>
+You also need to configure saslauthd to use MySQL. See <a href="http://www.postfix.org/SASL_README.html">Postfix SASL
+Howto</a> for more information.
+</p>
+</div>
+
+<div id="outline-container-org7b748af" class="outline-4">
+<h4 id="org7b748af">Configure saslauthd to use MySQL.</h4>
+<div class="outline-text-4" id="text-org7b748af">
+<p>
+Create the directory for saslauthd:
+</p>
+
+<div class="highlight"><pre><span></span>mkdir -p /var/spool/postfix/var/run/saslauthd
+</pre></div>
+
+
+
+<p>
+Make a backup copy of the /etc/default/saslauthd file if it already exists:
+</p>
+
+<div class="highlight"><pre><span></span>cp -a /etc/default/saslauthd /etc/default/saslauthd.bak
+</pre></div>
+
+<p>
+Edit the file /etc/default/saslauthd to match the configuration shown
+below.
+</p>
+
+<div class="highlight"><pre><span></span><span class="nv">START</span><span class="o">=</span>yes
+<span class="nv">DESC</span><span class="o">=</span><span class="s2">"SASL Authentication Daemon"</span>
+<span class="nv">NAME</span><span class="o">=</span><span class="s2">"saslauthd"</span>
+<span class="nv">MECHANISMS</span><span class="o">=</span><span class="s2">"pam"</span>
+<span class="nv">MECH_OPTIONS</span><span class="o">=</span><span class="s2">""</span>
+<span class="nv">THREADS</span><span class="o">=</span><span class="m">5</span>
+<span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">"-c -m /var/spool/postfix/var/run/saslauthd -r"</span>
+</pre></div>
+
+<p>
+Next, create the file /etc/pam.d/smtp and copy in the following two
+lines. Be sure to change "mail<sub>admin</sub><sub>password</sub>" to the password you
+chose for your mail administration MySQL user earlier.
+</p>
+
+<div class="highlight"><pre><span></span>    auth required /usr/lib/security/pam_mysql.so <span class="nv">user</span><span class="o">=</span>postfix <span class="nv">passwd</span><span class="o">=</span>iCUuGdmz <span class="nv">host</span><span class="o">=</span>localhost <span class="nv">db</span><span class="o">=</span>postfix <span class="nv">table</span><span class="o">=</span>mailbox usercolu<span class="se">\</span>
+<span class="nv">mn</span><span class="o">=</span>username <span class="nv">passwdcolumn</span><span class="o">=</span>password <span class="nv">crypt</span><span class="o">=</span><span class="m">1</span>
+   account sufficient /usr/lib/security/pam_mysql.so <span class="nv">user</span><span class="o">=</span>postfix <span class="nv">passwd</span><span class="o">=</span>iCUuGdmz <span class="nv">host</span><span class="o">=</span>localhost <span class="nv">db</span><span class="o">=</span>postfix <span class="nv">table</span><span class="o">=</span>mailbox use<span class="se">\</span>
+<span class="nv">rcolumn</span><span class="o">=</span>username <span class="nv">passwdcolumn</span><span class="o">=</span>password <span class="nv">crypt</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+
+<p>
+Now create:
+/etc/postfix/sasl/smtpd.conf
+</p>
+
+<p>
+Add the following information:
+</p>
+
+<div class="highlight"><pre><span></span>pwcheck_method: saslauthd
+mech_list: plain login
+allow_plaintext: <span class="nb">true</span>
+auxprop_plugin: mysql
+sql_hostnames: <span class="m">127</span>.0.0.1
+sql_user: your_user
+sql_passwd: mail_admin_password
+sql_database: postfix
+sql_select: <span class="k">select</span> password from maibox where <span class="nv">username</span> <span class="o">=</span> <span class="s1">'%u'</span>
+</pre></div>
+
+<p>
+Set the file permissions:
+</p>
+
+<div class="highlight"><pre><span></span>chmod <span class="nv">o</span><span class="o">=</span> /etc/pam.d/smtp
+chmod <span class="nv">o</span><span class="o">=</span> /etc/postfix/sasl/smtpd.conf
+</pre></div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org61bdbf6" class="outline-3">
+<h3 id="org61bdbf6">Start All the Required Daemons.</h3>
+<div class="outline-text-3" id="text-org61bdbf6">
+<p>
+Add the following to the "DAEMONS=" in /etc/rc.conf:
+</p>
+<div class="highlight"><pre><span></span>mysqld webmin saslauthd postfix postgrey dovecot mailgraph httpd
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-org998adb5" class="outline-3">
+<h3 id="org998adb5">Send a Test Message.</h3>
+<div class="outline-text-3" id="text-org998adb5">
+<p>
+You can confirm that Postfix is correctly configured by using telnet
+from your server to send an email.
+</p>
+
+<div class="highlight"><pre><span></span><span class="o">[</span>root@wilkesley vmail<span class="o">]</span><span class="c1"># telnet localhost 25</span>
+Trying ::1...
+Connection failed: Connection refused
+Trying <span class="m">127</span>.0.0.1...
+Connected to localhost.
+Escape character is <span class="s1">'^]'</span>.
+<span class="m">220</span> li40-130.members.linode.com ESMTP Postfix
+ehlo mail2.wilkesley.net
+<span class="m">250</span>-li40-130.members.linode.com
+<span class="m">250</span>-PIPELINING
+<span class="m">250</span>-SIZE <span class="m">50720000</span>
+<span class="m">250</span>-VRFY
+<span class="m">250</span>-ETRN
+<span class="m">250</span>-ENHANCEDSTATUSCODES
+<span class="m">250</span>-8BITMIME
+<span class="m">250</span> DSN
+mail from: root@localhost
+<span class="m">250</span> <span class="m">2</span>.1.0 Ok
+rcpt to: ian@localhost
+<span class="m">250</span> <span class="m">2</span>.1.5 Ok
+data
+<span class="m">354</span> End data with &lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;
+Subject: Test
+This is a <span class="nb">test</span> message.
+</pre></div>
+</div>
+</div>
+<div id="outline-container-org271f6c5" class="outline-3">
+<h3 id="org271f6c5">PHP.</h3>
+<div class="outline-text-3" id="text-org271f6c5">
+<p>
+You need to make some changes to /etc/php/php.ini:
+</p>
+
+<div class="highlight"><pre><span></span><span class="nv">magic_quotes_gpc</span> <span class="o">=</span> On <span class="p">;</span> Required <span class="k">for</span> postfixadmin
+<span class="nv">extension</span><span class="o">=</span>imap.so <span class="p">;</span> required <span class="k">for</span> Roundcube
+
+<span class="p">;</span> Required <span class="k">for</span> phpmyadmin
+<span class="nv">extension</span><span class="o">=</span>mysqli.so
+<span class="nv">extension</span><span class="o">=</span>mysql.so
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-orge6b7e23" class="outline-3">
+<h3 id="orge6b7e23">Roundcube Webmail.</h3>
+<div class="outline-text-3" id="text-orge6b7e23">
+<p>
+Installing a webmail application enables you to read your email from
+anywhere there is an Internet connection. I prefer <a href="http://www.roundcube.net">Roundcube</a> . You can
+download a tarball directly from the web site. The installation
+instructions included with the tarball are comprehensive and there is
+a web based installer. However, you need to create a MySQL database
+and a user who has all privileges for the database before running the
+installer.
+</p>
+
+<p>
+To access the Roundcube application you can put something like the
+folowing in your Apache vhost definition, assuming that you have
+installed Roundcube in /srv/http/webmail. This will then let you
+access Roundcube at htt://www.yourdoamin.com/webmail
+</p>
+
+<div class="highlight"><pre><span></span>Alias /webmail /srv/http/webmail
+&lt;Directory /srv/http/webmail&gt;
+     Options Indexes FollowSymLinks
+&lt;/Directory&gt;
+</pre></div>
+</div>
+</div>
+
+
+<div id="outline-container-org5f632ac" class="outline-3">
+<h3 id="org5f632ac">Mailgraph Email Statistics.</h3>
+<div class="outline-text-3" id="text-org5f632ac">
+<p>
+Mailgraph creates daily, weekly, monthly, and yearly graphs of sent,
+received, bounced and rejected emails. If you have spamassassin and
+clamav installed it will also report spam and viruses detected.
+</p>
+
+<p>
+Mailgraph is available from <a href="https://aur.archlinux.org/packages.php?ID=7780">AUR</a> and its homepage is <a href="http://mailgraph.schweikert.ch/">here</a> . The
+mailgraph.cgi file is installed into the cgi-bin directory of your web
+server. Depending on your web server's configuration you may need to
+copy this elsewhere. You will also need to add mailgraph to the
+DAEMONS array in /etc/rc.conf to ensure it's started at boot.
+</p>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/arch/" rel="tag">arch</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../2014-01-26-chrome-text-editors/" rel="prev" title="Chrome Text Editors">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../2014-04-22-casio-protek-battery-replacement/" rel="next" title="Casio Protek Battery Replacement">Next post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content-->
+</div>
+<aside class="col-md-4 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
+       <a href="https://www.google.com/cse/">Search</a>
+  <h4>About</h4>
+  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
+  And this sidebar is completely customizable — you can put anything you want
+  here!</p>
+</div>
+<div class="sidebar-module">
+  <h4>Links</h4>
+  <ol class="list-unstyled">
+<li><a href="../../categories/index.html">Tags</a></li>
+    <li><a href="../../archive.html">Archive</a></li>
+    <li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
+    <li><a href="https://getnikola.com/">Nikola</a></li>
+  </ol>
+</div>
+
+</aside>
+</div>
+
+        <footer id="footer">
+            Contents © 2019         <a href="mailto:ian@ianbarton.net">Ian Barton.</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#+BEGIN_COMMENT
+.. title: Poor Man's Fitbit
+.. slug:
+.. date: 2018-11-13 11:41:31 GMT
+.. tags:
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+I was interested to hear Richard's views on the Fitbit. Keeping a record of
+your activities can be very addictive. Although I do a lot of walking, I am
+also a cyclist. I do around 100-150 miles per week, all of which is recorded on
+my Garmin 810 and uploaded to various cloud services. I am not competitive, so
+I don't care if I have a King of the Mountains Strava segment. However being
+able to see exactly where I have been and compare my performance to the last
+ride over the same route is highly addictive. Also, I try to cycle at least as
+far each month as I did in the same month last year. Knowing that you only have
+four days left in a month and you need to cycle another 200km to equal last
+year's total is good motivation to get out when it's pouring with rain!
+
+Last year I saw the MiBand, which was only around £10, so thought I would give
+it a try. It's no FitBit, but is stonkingly good value for money. Battery life
+is amazing, often more than 30 days between charges. It records steps and sleep
+patterns. The one I have doesn't have an HRM, but there is a slightly more
+expensive model that does. It integrates with Google Fit and there are IOS and
+Android apps. One feature that I found very useful is the ability to set
+different vibration patterns based on your phones notifications. You need the
+excellent MiBand tools
+https://play.google.com/store/apps/details?id=cz.zdenekhorak.mibandtools to do
+this. So for example if I get a text from a family member, I get a different
+vibration pattern to a text from anyone else. Very useful when I am out on the
+bike and the phone is in my rucksack. If you don't know if a fitness band would
+be any use to you, for a small amount of money you can try the MiBand.

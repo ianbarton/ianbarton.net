@@ -1,0 +1,22 @@
+#+BEGIN_COMMENT
+.. title: Brother P Labeller
+.. slug: 2018-11-15-brother-p-labeller
+.. date: 2018-11-15 12:09:49 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+I have had a Brother P Touch label printer for years. I don't think that they
+sell my model any longer and I expect you can find a cheaper equivalent to this
+one. It's very simple to use and has a built-in cutter and gizmo to separate
+the label from the backing tape.
+
+I use it for labeling all sorts of things, such as files and storage
+boxes. It's great for labeling wall warts. Most of us have drawers full of
+rechargeable electronic items, which come with their own wall wart. If you
+don't label the plug it can be almost impossible to work out which plug you
+should use to power/recharge a particular bit of electronics.
+
+[[https://amzn.to/2Cf2IuE][Amazon link.]]

@@ -1,0 +1,77 @@
+#+BEGIN_COMMENT
+.. title: AfterShokz Trekz Air Bone Conduction Wireless Headphones Bluetooth
+.. slug:
+.. date: 2019-01-28 14:45:51 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. status: draft
+.. description
+.. type: text
+#+END_COMMENT
+
+I am a regular cyclist and I like to listen to my podcasts while I am out. I
+have been using a pair of Zolo Liberty wireless earphones for some time. They
+are in ear buds and so isolate you from outside noise. I need to be able to
+be aware of surrounding traffic, so I just use one of the ear buds when
+cycling. The sound quality from the Zolos is good, but they have a battery life
+of 2 to 2.5 hours. The case contains a rechargeable battery and can recharge
+the buds quickly. Half an hours charging gives more than an hours battery
+life. However, it can sometimes be a bit tricky to get the ear bugs to dock
+with the magnetic pogo pins in the charger case. There is also a worry that the
+ear bud might fall out of my ear while cycling. This has only happened twice,
+both times on a quiet country lane, so I managed to grab the ear bud off the
+road before it was run over.
+
+Recently I read a short review by another cyclist saying that they were using
+bone conduction ear phones. They deliver the sound through your cheek bones
+leaving your ears completely free to hear outside sounds. They have a light
+weight band that wraps round your head, making it very unlikely that they will
+fall off. They are IP55 rated, so are OK to use in pouring rain and shouldn't be
+affected by sweat. There are two noise cancelling microphones which exclude
+background noise so people can hear what you are saying if you use them for
+making and receiving phone calls.
+
+I listen to podcasts almost exclusively when cycling and not music and sound
+quality is good. I tried listening to some music tracks to evaluate their
+performance. Whilst they can't compete with my Sony over ear noise cancelling
+WH1000MX2, the sound was perfectly acceptable. Although I wouldn't usually use these
+ear phones for watching videos, I tried them watching Netflix and YouTube and
+lip sync was OK.
+
+There are two models of the Aftershokz. The original titanium and the lighter
+Trekz Air. In use they seem to be almost weightless (29.5g) and are comfortable to wear
+for several hours. The Air offer several improvements over the original
+Titanium:
+
+- Reduced sound leakage.
+- Improved dual noise cancelling mics.
+- New antenna for improved Bluetooth connection
+- Re-designed bone conduction transducers to deliver more bass
+
+Price: definitely not cheap! Around £150 for the Air, although I got mine of
+special offer for £99.
+
+Controls: one side has a button that acts as a pause/play control and will
+answer incoming phone calls. The bud on the opposite side has the micro usb
+recharging socket, the power on/off button and volume controls.The volume
+controls are small and difficult to operate. This isn't a problem for me as I
+normally set the volume on my phone before setting off and don't usually need
+to alter it. The controls will also allow to make and receive phone calls and
+check the battery status. Apart from answering phone calls, the other functions
+are difficult to control on small buttons hidden behind your ears.
+
+Battery life: claimed to be 6hrs (not tested by me). About an hour and a half
+to recharge, but 15 mins provides quite a boost. Recharging is via a micro usb
+socket, rather than USB C.
+
+There are voice prompts from "Audrey Says" to guide you through pairing and
+using the headphones, but if you have ever used bluetooth headphones before
+they are superfluous.
+
+To summarise: these headphones are designed for a niche use. If you participate
+in a sport where you need to be able to hear what's happening around you they
+are excellent. For more mainstream users they are of limited appeal.
+
+
+https://amzn.to/2Up96Ho

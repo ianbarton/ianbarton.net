@@ -1,0 +1,14 @@
+#+BEGIN_COMMENT
+.. title: Naxos Audiobooks
+.. slug: 2018-11-13-naxos-audiobooks
+.. date: 2018-11-14 13:53:02 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+I have used Naxos for several years. They sell audio books. Their usp is that
+all the books are available as unencrypted mp3. The books tend towards what
+might be termed "Classic Literature", although there are biographies, poetry
+and other genres.  https://www.naxosaudiobooks.com/

@@ -1,0 +1,11 @@
+#+BEGIN_COMMENT
+.. title: Wahoo Kickr Core Smart Trainer
+.. slug:
+.. date: 2019-01-31 11:24:05 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. status: draft
+.. description
+.. type: text
+#+END_COMMENT

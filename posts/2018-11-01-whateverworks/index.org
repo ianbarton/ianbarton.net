@@ -1,0 +1,16 @@
+#+BEGIN_COMMENT
+.. title: Whatever Works.
+.. slug: 2018-11-01-whateverworks
+.. date: 2018-11-01 19:15:24 UTC
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+I have been using Google+ for posts for some time. However, Google has
+announced that G+ is going to be closed down for non GSuite users! I have been
+one of the moderators for the WhateverWorks community, where I made many
+posts. I have exported those from G+ and will now re-post them here. I'll link
+the post to the original G+ one, so you can read the discussions relating to
+them while G+ is still available.

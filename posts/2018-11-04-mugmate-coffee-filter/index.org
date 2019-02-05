@@ -1,0 +1,20 @@
+#+BEGIN_COMMENT
+.. title: Mugmate Coffee Filter
+.. slug: 2018-11-04-mugmate-coffee-filter
+.. date: 2018-11-04 16:48:50 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+.. thumbnail:: /images/mug_mate.jpg
+#+END_COMMENT
+
+I like "proper" coffee, but can't be bothered with the faff of a cafetiere
+ . This lets you make one cup/mug at a time with minimal cleaning/washing
+ up. There are much cheaper ones on Amazon (around £5), but my searching fu
+ seems to be failing at the moment.
+
+*@@html: <a href="/images/Thermos.jpg" class="rounded float-left" alt="Thermos"><img src="/images/.mugmate.jpg"></a>@@*
+[[http://www.amazon.co.uk/gp/product/B000F1SSFI?keywords=MSR%2520Mugmate%2520Tea%252FCoffee%2520Filter&qid=1454265455&ref_=sr_1_1&sr=8-1][
+Mug Mate]]

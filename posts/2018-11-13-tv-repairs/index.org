@@ -1,0 +1,26 @@
+#+BEGIN_COMMENT
+.. title: TV Repairs
+.. slug: 2018-11-13-tv-repairs
+.. date: 2018-11-14 17:58:30 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+My son's 32" Samsung smart TV, which is only about 3yrs old developed a fault a
+few months ago. You could see the backlights come on, but nothing was displayed
+on screen. Our TV shop offers a free quote service for repairs and diagnosed a
+faulty T-Con board. They wanted £110 to repair it. We couldn't decide if it was
+worth repairing as a replacement would cost about £250. It has been sat on the
+floor looking lonely for a few months now.
+
+Inspired by Dave I took the back off the TV and removed the board. The whole
+procedure was very simple, the main difficulty was trying to stop the dog
+grabbing the screws off the table. I Googled for a replacement board and it
+seemed that it was either out of stock or a used one was about £60 on eBay. I
+have managed to find a supplier of the original board in China and should
+receive a brand new board for £33 in a few weeks.,
+
+I think the quote for repair was reasonable, given that the board would have
+cost them about £60 plus an hours labour.

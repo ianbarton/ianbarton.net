@@ -1,0 +1,41 @@
+#+BEGIN_COMMENT
+.. title: Google WiFi
+.. slug: 2018-11-15-google-wifi
+.. date: 2018-11-15 11:57:01 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+We live in an old farm house, with brick walls. When we were doing some
+renovations about 10 years ago, I managed to run ethernet to most of the
+rooms. This works if you have a desktop computer and don't mind having it
+plugged into an ethernet socket. However, almost all the family exclusively use
+devices that connect via WiFi. We got round the WiFi coverage problem by
+installing routers in several parts of the house, with separate
+SSID's. However, there are several parts of the house with poor coverage and
+you have to remember to connect to the SSID that gives you the best coverage.
+
+Enter the concept of mesh networks. There are several different companies
+making mesh networks. The main reasons I chose Google are it's trivially easy
+to configure and the app offers all sorts of performance monitoring. Like other
+mesh networks you have a single SSID and the network automatically connects you
+to the unit with the best performance in your location.
+
+Initial setup involves trying out where the WiFi units should be placed. This
+is where the app really shines. Not only does it tell you what the signal
+strength is in any room, but you can see the upload and download speed for each
+connected device. This makes it easy to move the access points around to give
+optimal performance for everyone.
+
+You can configure the network priority for each connected device to make sure
+your children don't hog all the available bandwidth. You can setup groups of
+devices, where you can control access to the network for the group. Useful to
+turn off Internet access at bed time.
+
+If you need to twiddle with various advanced network settings such as DNS
+servers and port forwarding, you can do this via the app.
+
+In summary: it just works out of the box, performance is good and it offers
+lots of twiddling options if you need them.

@@ -1,0 +1,4 @@
+Sitemap: https://ianbarton.net/sitemapindex.xml
+
+User-Agent: *
+Host: ianbarton.net

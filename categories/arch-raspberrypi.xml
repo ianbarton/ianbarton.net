@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Mutterings. (Posts about arch raspberrypi)</title><link>https://ianbarton.net/</link><description></description><atom:link href="https://ianbarton.net/categories/arch-raspberrypi.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Feb 2019 10:27:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Archlinux Raspberrypi Wireless Accesspoint Mobile Phone</title><link>https://ianbarton.net/posts/2014-03-27-archlinux-raspberrypi-wireless-accesspoint-mobile-phone/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;div&gt;&lt;p&gt;
+My mobile phone plan allows me to tether the phone, so I can access
+the Internet in areas where there is no WiFi but have a good 3g
+connection. This post explains how to set up a RaspberryPi as a
+wireless access point, which is tethered to a mobile phone. Users can
+then connect to the WiFi and access the internet.
+&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ianbarton.net/posts/2014-03-27-archlinux-raspberrypi-wireless-accesspoint-mobile-phone/"&gt;Read more…&lt;/a&gt; (10 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>arch raspberrypi</category><guid>https://ianbarton.net/posts/2014-03-27-archlinux-raspberrypi-wireless-accesspoint-mobile-phone/</guid><pubDate>Thu, 19 Oct 2017 19:15:48 GMT</pubDate></item></channel></rss>

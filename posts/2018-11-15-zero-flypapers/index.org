@@ -1,0 +1,28 @@
+#+BEGIN_COMMENT
+.. title: Zero Flypapers
+.. slug: 2018-11-15-zero-flypapers
+.. date: 2018-11-14 11:49:26 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/zero.jpg" class="rounded float-left" alt="Thermos"><img src="/images/zero.thumbnail.jpg"></a>@@*
+
+Living in close proximity to a couple of hundred cows, we are often inundated
+with flies in the kitchen when it's warm outside. There are lots of brands of
+fly papers about, but we have found these to be the best we have tried. They
+claim not to contain any chemical insecticide, but just use natural
+ingredients.
+
+We have tried several other methods of controlling flies, but these definitely
+result in the highest body count! The only downside is that you have bits of
+sticky paper with dead flies stuck to them. However, they are cheap enough to
+put fresh ones up at frequent intervals.
+
+Don't touch the sticky stuff on the paper when you are putting them up. It is
+very hard to remove it from your fingers!
+
+[[https://amzn.to/2Ha5gzQ][Amazon link.]]
