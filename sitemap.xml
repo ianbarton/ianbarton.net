@@ -18,8 +18,12 @@
   <lastmod>2019-02-04T10:11:00Z</lastmod>
  </url>
  <url>
+  <loc>https://ianbarton.net/2019/</loc>
+  <lastmod>2019-02-12T18:21:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://ianbarton.net/archive.html</loc>
-  <lastmod>2019-02-04T10:27:00Z</lastmod>
+  <lastmod>2019-02-12T18:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/categories/</loc>
@@ -75,7 +79,7 @@
  </url>
  <url>
   <loc>https://ianbarton.net/index-6.html</loc>
-  <lastmod>2019-02-04T10:27:00Z</lastmod>
+  <lastmod>2019-02-12T18:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/posts/2011-10-31-archlinux-mail-server/</loc>
@@ -319,6 +323,14 @@
  </url>
  <url>
   <loc>https://ianbarton.net/posts/2018-11-21-poundland-christmas-lights-mods/</loc>
+  <lastmod>2019-02-04T10:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ianbarton.net/posts/2019-01-28-honor-play/</loc>
+  <lastmod>2019-02-04T10:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ianbarton.net/posts/2019-01-31-wahoo-kickr-core/</loc>
   <lastmod>2019-02-04T10:11:00Z</lastmod>
  </url>
 </urlset>

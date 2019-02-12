@@ -5,7 +5,72 @@
 .. tags: whateverworks
 .. category:
 .. link:
-.. status: draft
+.. status:
 .. description
 .. type: text
 #+END_COMMENT
+
+My Lenovo P2 has been an excellent phone for the last couple of years. Decent
+performance and outstanding battery life. However, I am finding it's 32 GByte of
+internal storage a bit limiting. It's stuck on Android 7.0 with a November 2017
+security update and has been abandoned by Lenovo. I decided to have a look at
+what was available for less than £300.
+
+After looking at various reviews the Honor 8 with 6.5" screen seemed to fit my
+requirements. However, it had a micro usb port, not USBC. I now have several
+devices that have USBC ports and buying a new phone with micro USB connector
+seemed a bit "Olde school". After a bit more research I discovered the Honor 8
+Play. This is basically a souped up version of the Honor 8, supposedly aimed at
+gamers.
+
+Specs. include:
+
+6.3-inch full view display LCD IPS (1080 x 2340)
+16MP+2MP dual AI camera
+3750mAH  battery supports 1.5 days of heavy usage and includes 9V/2A quick charge
+Kirin 970 AI Chipset
+64 GByte on board storage with micro/usb dual SIM capability.
+USBC connector
+
+On Amazon it was priced at £240, well within my budget. Now I am not a gamer,
+but I thought paying a bit extra for a phone that had better performance and
+USBC was worth it.
+
+Initial setup was a bit unusual. Honor has their own Phone Clone app that did
+an excellent job of transferring all my apps and data from the P2. The phone
+has a Notch, that bothered me for all of about 5 minutes before I ignored
+it. There is a fingerprint scanner on the back and face recognition works
+really well, even when I am wearing my beanie and reading glasses.
+
+Honor's UI seemed OK, but as a long time Nova user, I just restored my saved
+settings from the P2. The phone is not officially water proof, but the only time this
+has been a problem for me was back when I had a Nokia 5800 that was inside the
+top pocket of my rucksack and the screen died either from moisture or the cold
+in a snow storm. At full brightness you can see the screen OK in bright sun,
+but I normally run it at about 20%. The screen aspect ratio makes it easy to
+reach either edge of the screen, but as I never use the phone one handed that
+doesn't matter to me.
+
+Speaker is OK, but I only use it for listening to phone calls. It does have
+the dinosaur 3.5mm jack.
+
+Huawei gives you an awful lot of settings to tinker with, but sometimes this
+makes it difficult to find a particular setting buried deep in some menu.
+
+The phone came with Anrdoid 8.0, but immediately updated to 9.0 with November
+2018 security patches.
+
+As it's meant to be a gaming phone, it came with several pre-installed games,
+all of which I immediately deleted. There are a couple of other Honor apps that
+can be deleted if you want to.
+
+Bluetooth connected to all my headphones and speakers without a problem. The
+bluetooth version is 4.2 with AptX HD.
+
+Main camera is 16 MP, f/2.2 with the front camera being 16 MP, f/2.0. Photos
+are fine for me.
+
+Battery life - I had no problem getting through a day with more than 50%
+available at bed time most days.
+
+https://amzn.to/2UNNhkU
