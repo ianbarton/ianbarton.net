@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: AfterShokz Trekz Air Bone Conduction Wireless Headphones Bluetooth
-.. slug:
+.. slug: 2019-01-28-aftershokz-trekz-air-bone-conduction-wireless-headphones-bluetooth
 .. date: 2019-01-28 14:45:51 GMT
 .. tags: whateverworks
 .. category:

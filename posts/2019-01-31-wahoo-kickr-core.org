@@ -5,7 +5,7 @@
 .. tags: whateverworks
 .. category:
 .. link:
-.. status:
+.. status: draft
 .. description
 .. type: text
 #+END_COMMENT
