@@ -1,6 +1,6 @@
 #+BEGIN_COMMENT
 .. title: Honor Play
-.. slug:
+.. slug: 2019-01-28-honor-play
 .. date: 2019-01-28 14:33:23 GMT
 .. tags: whateverworks
 .. category:
@@ -9,6 +9,7 @@
 .. description
 .. type: text
 #+END_COMMENT
+*@@html: <a href="/images/honor_play.jpg" class="rounded float-left"alt="Honor Play"><img src="/images/honor_play.thumbnail.jpg"></a>@@*
 
 My Lenovo P2 has been an excellent phone for the last couple of years. Decent
 performance and outstanding battery life. However, I am finding it's 32 GByte of
@@ -25,12 +26,12 @@ gamers.
 
 Specs. include:
 
-6.3-inch full view display LCD IPS (1080 x 2340)
-16MP+2MP dual AI camera
-3750mAH  battery supports 1.5 days of heavy usage and includes 9V/2A quick charge
-Kirin 970 AI Chipset
-64 GByte on board storage with micro/usb dual SIM capability.
-USBC connector
+- 6.3-inch full view display LCD IPS (1080 x 2340)
+- 16MP+2MP dual AI camera
+- 3750mAH  battery supports 1.5 days of heavy usage and includes 9V/2A quick charge
+- Kirin 970 AI Chipset
+- 64 GByte on board storage with micro/usb dual SIM capability.
+- USBC connector
 
 On Amazon it was priced at £240, well within my budget. Now I am not a gamer,
 but I thought paying a bit extra for a phone that had better performance and

@@ -127,13 +127,13 @@ a wired network. I find this useful at home as our ADSL connection
 is unreliable. I can just plug the Pi into our wired network and use
 it to access the internet.</li>
 </ul>
-<div id="outline-container-orgf4d5833" class="outline-2">
-<h2 id="orgf4d5833">Preflight Check.</h2>
-<div class="outline-text-2" id="text-orgf4d5833">
+<div id="outline-container-org9c4867d" class="outline-2">
+<h2 id="org9c4867d">Preflight Check.</h2>
+<div class="outline-text-2" id="text-org9c4867d">
 </div>
-<div id="outline-container-org7b178c1" class="outline-3">
-<h3 id="org7b178c1">Check that Your WiFi Card Can Act as an Access Point.</h3>
-<div class="outline-text-3" id="text-org7b178c1">
+<div id="outline-container-orgf50fc55" class="outline-3">
+<h3 id="orgf50fc55">Check that Your WiFi Card Can Act as an Access Point.</h3>
+<div class="outline-text-3" id="text-orgf50fc55">
 <p>
 Not all wireless cards can act as an access point. To check if yours
 can in a terminal:
@@ -157,9 +157,9 @@ can't act as an access point.
 </p>
 </div>
 </div>
-<div id="outline-container-org76e79fa" class="outline-3">
-<h3 id="org76e79fa">Power Supply.</h3>
-<div class="outline-text-3" id="text-org76e79fa">
+<div id="outline-container-org7467453" class="outline-3">
+<h3 id="org7467453">Power Supply.</h3>
+<div class="outline-text-3" id="text-org7467453">
 <p>
 You will almost certainly need to use a powered USB hub as the
 combined WiFi dongle and Android phone will take more current than the
@@ -171,9 +171,9 @@ Pi can supply.
 
 
 
-<div id="outline-container-org0ea65ea" class="outline-2">
-<h2 id="org0ea65ea">Installing Required Software.</h2>
-<div class="outline-text-2" id="text-org0ea65ea">
+<div id="outline-container-org249d4e7" class="outline-2">
+<h2 id="org249d4e7">Installing Required Software.</h2>
+<div class="outline-text-2" id="text-org249d4e7">
 <p>
 This assumes that you have installed the base Arch packages and have a
 working dhcp ethernet connection. You do not require a
@@ -187,9 +187,9 @@ this article my Pi has been given the host name "routerpi.bantercat.co.uk"
 </div>
 </div>
 
-<div id="outline-container-orgaee2a4a" class="outline-2">
-<h2 id="orgaee2a4a">Using an Android Phone as a usb Modem.</h2>
-<div class="outline-text-2" id="text-orgaee2a4a">
+<div id="outline-container-org63fcf6a" class="outline-2">
+<h2 id="org63fcf6a">Using an Android Phone as a usb Modem.</h2>
+<div class="outline-text-2" id="text-org63fcf6a">
 <p>
 Some phones have the ability to tether via usb disabled by the network
 provider. I am assuming that your phone is able to tether. To check if
@@ -206,9 +206,9 @@ enable this manually.
 </p>
 </div>
 
-<div id="outline-container-org83f3754" class="outline-3">
-<h3 id="org83f3754">Configuring a Network Interface for the Android Phone.</h3>
-<div class="outline-text-3" id="text-org83f3754">
+<div id="outline-container-org4a811ff" class="outline-3">
+<h3 id="org4a811ff">Configuring a Network Interface for the Android Phone.</h3>
+<div class="outline-text-3" id="text-org4a811ff">
 <p>
 You will need to create a netctl profile. I have called mine
 android-dhcp:
@@ -235,9 +235,9 @@ You can test that the interface is working:
 </div>
 
 
-<div id="outline-container-orgcd5c97d" class="outline-2">
-<h2 id="orgcd5c97d">Configuring the dhcp server.</h2>
-<div class="outline-text-2" id="text-orgcd5c97d">
+<div id="outline-container-org03b2804" class="outline-2">
+<h2 id="org03b2804">Configuring the dhcp server.</h2>
+<div class="outline-text-2" id="text-org03b2804">
 <p>
 First we need to tell the dhcp server which interfaces to listen on.
 </p>
@@ -345,9 +345,9 @@ sudo systemctl start dhcpd4.service
 </div>
 </div>
 
-<div id="outline-container-org4c53133" class="outline-2">
-<h2 id="org4c53133">Configuring the Wireless Interface and hostapd.</h2>
-<div class="outline-text-2" id="text-org4c53133">
+<div id="outline-container-orgf6082ed" class="outline-2">
+<h2 id="orgf6082ed">Configuring the Wireless Interface and hostapd.</h2>
+<div class="outline-text-2" id="text-orgf6082ed">
 <p>
 I needed to setup a basic interface on wlan0 before hostapd starts. I
 did this using a systemd unit. I had quite a bit of trouble getting
@@ -408,9 +408,9 @@ Now edit /etc/hostapd/hostapd.conf:
 </div>
 
 
-<div id="outline-container-org46649cc" class="outline-2">
-<h2 id="org46649cc">Firewall and Routing.</h2>
-<div class="outline-text-2" id="text-org46649cc">
+<div id="outline-container-org66c0e6a" class="outline-2">
+<h2 id="org66c0e6a">Firewall and Routing.</h2>
+<div class="outline-text-2" id="text-org66c0e6a">
 <p>
 I have installed <a href="http://shorewall.org">shorewall</a> which serves two purposes. It acts as a
 firewall and also routes traffic between the ethernet interface and
@@ -435,9 +435,9 @@ NAT.
 </p>
 </div>
 
-<div id="outline-container-org0232da0" class="outline-3">
-<h3 id="org0232da0">Shorewall Configuration.</h3>
-<div class="outline-text-3" id="text-org0232da0">
+<div id="outline-container-org6b20d68" class="outline-3">
+<h3 id="org6b20d68">Shorewall Configuration.</h3>
+<div class="outline-text-3" id="text-org6b20d68">
 <p>
 It's very easy to lock yourself out of the server while setting up
 Shorewall. Until you are confident that you have configured your rules
@@ -456,9 +456,9 @@ previous configuration.
 </div>
 </div>
 
-<div id="outline-container-org68fe2ee" class="outline-2">
-<h2 id="org68fe2ee">Testing.</h2>
-<div class="outline-text-2" id="text-org68fe2ee">
+<div id="outline-container-org1d5cced" class="outline-2">
+<h2 id="org1d5cced">Testing.</h2>
+<div class="outline-text-2" id="text-org1d5cced">
 <p>
 Log in via the ethernet interface and try to ping the network address
 for the WiFi card:
@@ -478,13 +478,13 @@ succeeds you should be allocated a network address in the range
 </p>
 </div>
 </div>
-<div id="outline-container-orgad63639" class="outline-2">
-<h2 id="orgad63639">Shorewall.</h2>
-<div class="outline-text-2" id="text-orgad63639">
+<div id="outline-container-orgb604e7d" class="outline-2">
+<h2 id="orgb604e7d">Shorewall.</h2>
+<div class="outline-text-2" id="text-orgb604e7d">
 </div>
-<div id="outline-container-orgaf81804" class="outline-3">
-<h3 id="orgaf81804">Interfaces.</h3>
-<div class="outline-text-3" id="text-orgaf81804">
+<div id="outline-container-org7249692" class="outline-3">
+<h3 id="org7249692">Interfaces.</h3>
+<div class="outline-text-3" id="text-org7249692">
 <div class="highlight"><pre><span></span> #
  # Shorewall version 4.0 - Sample Interfaces File for two-interface configuration.
  # Copyright (C) 2006 by the Shorewall Team
@@ -505,9 +505,9 @@ succeeds you should be allocated a network address in the range
 </pre></div>
 </div>
 </div>
-<div id="outline-container-orgc2a9d43" class="outline-3">
-<h3 id="orgc2a9d43">masq</h3>
-<div class="outline-text-3" id="text-orgc2a9d43">
+<div id="outline-container-org8906a76" class="outline-3">
+<h3 id="org8906a76">masq</h3>
+<div class="outline-text-3" id="text-org8906a76">
 <div class="highlight"><pre><span></span>#
 # Shorewall version 4.0 - Sample Masq file for two-interface configuration.
 # Copyright (C) 2006 by the Shorewall Team
@@ -538,9 +538,9 @@ usb0                    10.0.0.0/24
 </div>
 
 
-<div id="outline-container-orgea05ee6" class="outline-3">
-<h3 id="orgea05ee6">Policy.</h3>
-<div class="outline-text-3" id="text-orgea05ee6">
+<div id="outline-container-orgff9d5e0" class="outline-3">
+<h3 id="orgff9d5e0">Policy.</h3>
+<div class="outline-text-3" id="text-orgff9d5e0">
 <div class="highlight"><pre><span></span>#
 # Shorewall version 4 - Policy File
 #
@@ -569,9 +569,9 @@ all             all             REJECT          info
 </div>
 </div>
 
-<div id="outline-container-org5912c43" class="outline-3">
-<h3 id="org5912c43">Rules.</h3>
-<div class="outline-text-3" id="text-org5912c43">
+<div id="outline-container-org40d2eae" class="outline-3">
+<h3 id="org40d2eae">Rules.</h3>
+<div class="outline-text-3" id="text-org40d2eae">
 <div class="highlight"><pre><span></span>#
 # Shorewall version 4.0 - Sample Rules File for two-interface configuration.
 # Copyright (C) 2006,2007 by the Shorewall Team
@@ -620,9 +620,9 @@ ACCEPT    $FW         net      tcp      www
 </div>
 </div>
 
-<div id="outline-container-orgc81b4fd" class="outline-3">
-<h3 id="orgc81b4fd">Routestopped.</h3>
-<div class="outline-text-3" id="text-orgc81b4fd">
+<div id="outline-container-org68b4293" class="outline-3">
+<h3 id="org68b4293">Routestopped.</h3>
+<div class="outline-text-3" id="text-org68b4293">
 <div class="highlight"><pre><span></span>#
 # Shorewall version 4.0 - Sample Routestopped File for two-interface configuration.
 # Copyright (C) 2006 by the Shorewall Team
@@ -643,9 +643,9 @@ ACCEPT   -                            wlan0
 </div>
 </div>
 
-<div id="outline-container-orgd256529" class="outline-3">
-<h3 id="orgd256529">shorewall.conf.</h3>
-<div class="outline-text-3" id="text-orgd256529">
+<div id="outline-container-org67b2928" class="outline-3">
+<h3 id="org67b2928">shorewall.conf.</h3>
+<div class="outline-text-3" id="text-org67b2928">
 <div class="highlight"><pre><span></span>###############################################################################
 #
 # Shorewall version 4.0 - Sample shorewall.conf for two-interface
@@ -865,9 +865,9 @@ TCP_FLAGS_DISPOSITION=DROP
 </div>
 </div>
 
-<div id="outline-container-orgb36fdcc" class="outline-3">
-<h3 id="orgb36fdcc">zones.</h3>
-<div class="outline-text-3" id="text-orgb36fdcc">
+<div id="outline-container-org24ed802" class="outline-3">
+<h3 id="org24ed802">zones.</h3>
+<div class="outline-text-3" id="text-org24ed802">
 <div class="highlight"><pre><span></span>#
 # Shorewall version 4 - Zones File
 #

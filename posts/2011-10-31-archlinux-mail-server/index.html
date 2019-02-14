@@ -98,9 +98,9 @@ users. Using Postfix, Dovecot, SASL, postgrey, Roundcube and mailgraph.
 </p>
 <!-- TEASER_END -->
 
-<div id="outline-container-orgecb41d6" class="outline-2">
-<h2 id="orgecb41d6">Home Mail Server Using ArchLinux, Postfix and Dovecot.</h2>
-<div class="outline-text-2" id="text-orgecb41d6">
+<div id="outline-container-org90a6a4d" class="outline-2">
+<h2 id="org90a6a4d">Home Mail Server Using ArchLinux, Postfix and Dovecot.</h2>
+<div class="outline-text-2" id="text-org90a6a4d">
 <p>
 This tutorial aims to show you how to set up a mail server with
 virtual users, imap and POP3 email, spamassassin, anti-virus, postgrey
@@ -122,9 +122,9 @@ I can do it again and I hope that it might be useful to others.
 </p>
 </div>
 
-<div id="outline-container-org096d8b3" class="outline-3">
-<h3 id="org096d8b3">Overview.</h3>
-<div class="outline-text-3" id="text-org096d8b3">
+<div id="outline-container-org44687ad" class="outline-3">
+<h3 id="org44687ad">Overview.</h3>
+<div class="outline-text-3" id="text-org44687ad">
 <p>
 Virtual users are stored in a MySQL database and are managed using the
 <a href="http://postfixadmin.sourceforge.net/">PostfixAdmin</a> web based interface. Postfix is used as a Mail Transfer
@@ -175,9 +175,9 @@ bounced/rejected mail.
 </div>
 </div>
 
-<div id="outline-container-org5c9400d" class="outline-3">
-<h3 id="org5c9400d">Using This File.</h3>
-<div class="outline-text-3" id="text-org5c9400d">
+<div id="outline-container-org89b6733" class="outline-3">
+<h3 id="org89b6733">Using This File.</h3>
+<div class="outline-text-3" id="text-org89b6733">
 <p>
 The original file for the html page was written using Emacs <a href="http://orgmode.org">org-mode</a>
 and is available from <a href="https://github.com/geekinthesticks/ArchLinux-Mail-Server">Github</a> . If you are using Emacs and have enabled
@@ -193,9 +193,9 @@ should always use the version available on Githum.
 </div>
 </div>
 
-<div id="outline-container-org2fb0425" class="outline-3">
-<h3 id="org2fb0425">Installation.</h3>
-<div class="outline-text-3" id="text-org2fb0425">
+<div id="outline-container-orgc1ff750" class="outline-3">
+<h3 id="orgc1ff750">Installation.</h3>
+<div class="outline-text-3" id="text-orgc1ff750">
 <div class="highlight"><pre><span></span>pacman -S php mysql apache postfix dovecot <span class="se">\</span>
  squirrelmail spamassassin pigeonhole <span class="se">\</span>
 postgrey cyrus-sasl cyrus-sasl-plugins pam_mysql
@@ -293,9 +293,9 @@ don't start setting up domains and users yet.
 </div>
 </div>
 
-<div id="outline-container-org0937c04" class="outline-3">
-<h3 id="org0937c04">Creating the vmail User.</h3>
-<div class="outline-text-3" id="text-org0937c04">
+<div id="outline-container-org058dfdc" class="outline-3">
+<h3 id="org058dfdc">Creating the vmail User.</h3>
+<div class="outline-text-3" id="text-org058dfdc">
 <p>
 All mail is stored in Maildir format under
 /home/vmail/yourdomain.com/username/Maidir.
@@ -313,9 +313,9 @@ chmod <span class="m">750</span> /home/vmail
 </div>
 </div>
 
-<div id="outline-container-orgd4efde5" class="outline-3">
-<h3 id="orgd4efde5">Generate a Self Signed SSL Certificate.</h3>
-<div class="outline-text-3" id="text-orgd4efde5">
+<div id="outline-container-org3544023" class="outline-3">
+<h3 id="org3544023">Generate a Self Signed SSL Certificate.</h3>
+<div class="outline-text-3" id="text-org3544023">
 <p>
 Sending and receiving mail is secured using SSL. You need to generate
 a certificate. The code below generates a certificate valid for 365
@@ -355,9 +355,9 @@ mv server.key /etc/ssl/private/
 </div>
 </div>
 
-<div id="outline-container-org8968d2c" class="outline-3">
-<h3 id="org8968d2c">Dovecot.</h3>
-<div class="outline-text-3" id="text-org8968d2c">
+<div id="outline-container-org14a5cad" class="outline-3">
+<h3 id="org14a5cad">Dovecot.</h3>
+<div class="outline-text-3" id="text-org14a5cad">
 <p>
 This article assumes that you are using at least Dovecot 2.0 or later, which is the
 default in Arch. Dovecot has many configuration options, which are
@@ -391,9 +391,9 @@ This allows me to place the Sieve filter scripts in "/home/vmail/domain.com/user
 </p>
 </div>
 
-<div id="outline-container-org75a808c" class="outline-4">
-<h4 id="org75a808c">dovecot.conf</h4>
-<div class="outline-text-4" id="text-org75a808c">
+<div id="outline-container-orgd9b57ad" class="outline-4">
+<h4 id="orgd9b57ad">dovecot.conf</h4>
+<div class="outline-text-4" id="text-orgd9b57ad">
 <div class="highlight"><pre><span></span><span class="nv">protocols</span> <span class="o">=</span> imap sieve
 <span class="nv">ssl</span> <span class="o">=</span> yes
 <span class="nv">ssl_cert</span> <span class="o">=</span> &lt;/etc/ssl/certs/mail2.wilkesley.net.crt
@@ -468,9 +468,9 @@ plugin <span class="o">{</span>
 </div>
 </div>
 
-<div id="outline-container-org0542689" class="outline-4">
-<h4 id="org0542689">dovecot-sql.conf</h4>
-<div class="outline-text-4" id="text-org0542689">
+<div id="outline-container-org0858999" class="outline-4">
+<h4 id="org0858999">dovecot-sql.conf</h4>
+<div class="outline-text-4" id="text-org0858999">
 <div class="highlight"><pre><span></span><span class="nv">driver</span> <span class="o">=</span> mysql
 
 <span class="nv">connect</span> <span class="o">=</span> <span class="nv">host</span><span class="o">=</span>localhost <span class="nv">dbname</span><span class="o">=</span>postfix <span class="nv">user</span><span class="o">=</span>postfix <span class="nv">password</span><span class="o">=</span>YourPassword
@@ -484,9 +484,9 @@ plugin <span class="o">{</span>
 
 
 
-<div id="outline-container-org05968ca" class="outline-4">
-<h4 id="org05968ca">Checking that Dovecot is Working.</h4>
-<div class="outline-text-4" id="text-org05968ca">
+<div id="outline-container-org62e2b70" class="outline-4">
+<h4 id="org62e2b70">Checking that Dovecot is Working.</h4>
+<div class="outline-text-4" id="text-org62e2b70">
 <p>
 You can check the Dovecot and sieve are installed correctly using
 gnutls-cli. Note that port 4190 is the default port for sieve.
@@ -518,18 +518,18 @@ OK <span class="s2">"Begin TLS negotiation now."</span>
 </div>
 </div>
 
-<div id="outline-container-orge22f80f" class="outline-3">
-<h3 id="orge22f80f">Postfix.</h3>
-<div class="outline-text-3" id="text-orge22f80f">
+<div id="outline-container-orgfb2ea23" class="outline-3">
+<h3 id="orgfb2ea23">Postfix.</h3>
+<div class="outline-text-3" id="text-orgfb2ea23">
 <p>
 Postfix has many options. The configuration shown below should be
 sufficient to get you started. However, I recommend studying all the
 options available.
 </p>
 </div>
-<div id="outline-container-org98332b4" class="outline-4">
-<h4 id="org98332b4">main.cf</h4>
-<div class="outline-text-4" id="text-org98332b4">
+<div id="outline-container-org39f900f" class="outline-4">
+<h4 id="org39f900f">main.cf</h4>
+<div class="outline-text-4" id="text-org39f900f">
 <div class="highlight"><pre><span></span><span class="nv">soft_bounce</span> <span class="o">=</span> yes
 <span class="nv">queue_directory</span> <span class="o">=</span> /var/spool/postfix
 <span class="nv">command_directory</span> <span class="o">=</span> /usr/sbin
@@ -637,9 +637,9 @@ options available.
 </div>
 </div>
 
-<div id="outline-container-orge693b93" class="outline-4">
-<h4 id="orge693b93">master.cf</h4>
-<div class="outline-text-4" id="text-orge693b93">
+<div id="outline-container-orgfd4c985" class="outline-4">
+<h4 id="orgfd4c985">master.cf</h4>
+<div class="outline-text-4" id="text-orgfd4c985">
 <div class="highlight"><pre><span></span><span class="c1">#628       inet  n       -       n       -       -       qmqpd</span>
 pickup    fifo  n       -       n       <span class="m">60</span>      <span class="m">1</span>       pickup
 cleanup   unix  n       -       n       -       <span class="m">0</span>       cleanup
@@ -680,10 +680,10 @@ dovecot   unix  -       n       n       -       -       pipe
 </div>
 </div>
 
-<div id="outline-container-orgf8c7d54" class="outline-4">
-<h4 id="orgf8c7d54">mysql<sub>virtual</sub><sub>maps.cf</sub>
+<div id="outline-container-org1ef46d6" class="outline-4">
+<h4 id="org1ef46d6">mysql<sub>virtual</sub><sub>maps.cf</sub>
 </h4>
-<div class="outline-text-4" id="text-orgf8c7d54">
+<div class="outline-text-4" id="text-org1ef46d6">
 <div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
 <span class="nv">password</span> <span class="o">=</span> YourPassword
 <span class="nv">hosts</span> <span class="o">=</span> localhost
@@ -695,10 +695,10 @@ dovecot   unix  -       n       n       -       -       pipe
 </div>
 </div>
 
-<div id="outline-container-org1c07edf" class="outline-4">
-<h4 id="org1c07edf">mysql<sub>virtual</sub><sub>domains</sub><sub>maps.cf</sub>
+<div id="outline-container-org84e1058" class="outline-4">
+<h4 id="org84e1058">mysql<sub>virtual</sub><sub>domains</sub><sub>maps.cf</sub>
 </h4>
-<div class="outline-text-4" id="text-org1c07edf">
+<div class="outline-text-4" id="text-org84e1058">
 <div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
 <span class="nv">password</span> <span class="o">=</span> YourPassword
 <span class="nv">hosts</span> <span class="o">=</span> localhost
@@ -711,10 +711,10 @@ dovecot   unix  -       n       n       -       -       pipe
 </div>
 </div>
 
-<div id="outline-container-org3ed9d44" class="outline-4">
-<h4 id="org3ed9d44">mysql<sub>virtual</sub><sub>mailbox</sub><sub>limit</sub><sub>maps.cf</sub>
+<div id="outline-container-org4b651b2" class="outline-4">
+<h4 id="org4b651b2">mysql<sub>virtual</sub><sub>mailbox</sub><sub>limit</sub><sub>maps.cf</sub>
 </h4>
-<div class="outline-text-4" id="text-org3ed9d44">
+<div class="outline-text-4" id="text-org4b651b2">
 <div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
 <span class="nv">password</span> <span class="o">=</span> YourPassword
 <span class="nv">hosts</span> <span class="o">=</span> localhost
@@ -727,10 +727,10 @@ dovecot   unix  -       n       n       -       -       pipe
 </div>
 </div>
 
-<div id="outline-container-orgb78d87c" class="outline-4">
-<h4 id="orgb78d87c">mysql<sub>virtual</sub><sub>mailbox</sub><sub>maps.cf</sub>
+<div id="outline-container-org9679041" class="outline-4">
+<h4 id="org9679041">mysql<sub>virtual</sub><sub>mailbox</sub><sub>maps.cf</sub>
 </h4>
-<div class="outline-text-4" id="text-orgb78d87c">
+<div class="outline-text-4" id="text-org9679041">
 <div class="highlight"><pre><span></span><span class="nv">user</span> <span class="o">=</span> postfix
 <span class="nv">password</span> <span class="o">=</span> YourPassword
 <span class="nv">hosts</span> <span class="o">=</span> localhost
@@ -742,9 +742,9 @@ dovecot   unix  -       n       n       -       -       pipe
 </div>
 
 
-<div id="outline-container-org46aff5f" class="outline-4">
-<h4 id="org46aff5f">Postgrey.</h4>
-<div class="outline-text-4" id="text-org46aff5f">
+<div id="outline-container-org534c9f7" class="outline-4">
+<h4 id="org534c9f7">Postgrey.</h4>
+<div class="outline-text-4" id="text-org534c9f7">
 <p>
 You can use Postgrey in combination with a number of other settings in
 Postfix to greatly reduce the amount of spam you receive. I find that
@@ -779,9 +779,9 @@ main.cf:
 </div>
 </div>
 
-<div id="outline-container-org32ea381" class="outline-3">
-<h3 id="org32ea381">Filtering Mail with Sieve.</h3>
-<div class="outline-text-3" id="text-org32ea381">
+<div id="outline-container-org10c748c" class="outline-3">
+<h3 id="org10c748c">Filtering Mail with Sieve.</h3>
+<div class="outline-text-3" id="text-org10c748c">
 <p>
 Sieve support for Dovecot is now provided by <a href="http://http//pigeonhole.dovecot.org/">pigeonhole</a> . Sieve allows
 you to write scripts that customize mail delivery. You can forward or
@@ -806,9 +806,9 @@ to give them write permission to this directory.
 </div>
 </div>
 
-<div id="outline-container-org8eb8339" class="outline-3">
-<h3 id="org8eb8339">SMTP-AUTH and saslauthd.</h3>
-<div class="outline-text-3" id="text-org8eb8339">
+<div id="outline-container-org54fba5c" class="outline-3">
+<h3 id="org54fba5c">SMTP-AUTH and saslauthd.</h3>
+<div class="outline-text-3" id="text-org54fba5c">
 <p>
 Smtp-auth ensures that your users can send email, but your mail server
 isn't an open relay. Users who are authenticated with their login
@@ -821,9 +821,9 @@ Howto</a> for more information.
 </p>
 </div>
 
-<div id="outline-container-org7b748af" class="outline-4">
-<h4 id="org7b748af">Configure saslauthd to use MySQL.</h4>
-<div class="outline-text-4" id="text-org7b748af">
+<div id="outline-container-orgaa38f92" class="outline-4">
+<h4 id="orgaa38f92">Configure saslauthd to use MySQL.</h4>
+<div class="outline-text-4" id="text-orgaa38f92">
 <p>
 Create the directory for saslauthd:
 </p>
@@ -897,9 +897,9 @@ chmod <span class="nv">o</span><span class="o">=</span> /etc/postfix/sasl/smtpd.
 </div>
 </div>
 
-<div id="outline-container-org61bdbf6" class="outline-3">
-<h3 id="org61bdbf6">Start All the Required Daemons.</h3>
-<div class="outline-text-3" id="text-org61bdbf6">
+<div id="outline-container-org7d82c70" class="outline-3">
+<h3 id="org7d82c70">Start All the Required Daemons.</h3>
+<div class="outline-text-3" id="text-org7d82c70">
 <p>
 Add the following to the "DAEMONS=" in /etc/rc.conf:
 </p>
@@ -908,9 +908,9 @@ Add the following to the "DAEMONS=" in /etc/rc.conf:
 </div>
 </div>
 
-<div id="outline-container-org998adb5" class="outline-3">
-<h3 id="org998adb5">Send a Test Message.</h3>
-<div class="outline-text-3" id="text-org998adb5">
+<div id="outline-container-orgd8d915e" class="outline-3">
+<h3 id="orgd8d915e">Send a Test Message.</h3>
+<div class="outline-text-3" id="text-orgd8d915e">
 <p>
 You can confirm that Postfix is correctly configured by using telnet
 from your server to send an email.
@@ -943,9 +943,9 @@ This is a <span class="nb">test</span> message.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-org271f6c5" class="outline-3">
-<h3 id="org271f6c5">PHP.</h3>
-<div class="outline-text-3" id="text-org271f6c5">
+<div id="outline-container-org7eff98f" class="outline-3">
+<h3 id="org7eff98f">PHP.</h3>
+<div class="outline-text-3" id="text-org7eff98f">
 <p>
 You need to make some changes to /etc/php/php.ini:
 </p>
@@ -960,9 +960,9 @@ You need to make some changes to /etc/php/php.ini:
 </div>
 </div>
 
-<div id="outline-container-orge6b7e23" class="outline-3">
-<h3 id="orge6b7e23">Roundcube Webmail.</h3>
-<div class="outline-text-3" id="text-orge6b7e23">
+<div id="outline-container-org598ef7a" class="outline-3">
+<h3 id="org598ef7a">Roundcube Webmail.</h3>
+<div class="outline-text-3" id="text-org598ef7a">
 <p>
 Installing a webmail application enables you to read your email from
 anywhere there is an Internet connection. I prefer <a href="http://www.roundcube.net">Roundcube</a> . You can
@@ -989,9 +989,9 @@ access Roundcube at htt://www.yourdoamin.com/webmail
 </div>
 
 
-<div id="outline-container-org5f632ac" class="outline-3">
-<h3 id="org5f632ac">Mailgraph Email Statistics.</h3>
-<div class="outline-text-3" id="text-org5f632ac">
+<div id="outline-container-orgddfe347" class="outline-3">
+<h3 id="orgddfe347">Mailgraph Email Statistics.</h3>
+<div class="outline-text-3" id="text-orgddfe347">
 <p>
 Mailgraph creates daily, weekly, monthly, and yearly graphs of sent,
 received, bounced and rejected emails. If you have spamassassin and

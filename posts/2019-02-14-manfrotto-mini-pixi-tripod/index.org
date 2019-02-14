@@ -1,0 +1,40 @@
+#+BEGIN_COMMENT
+.. title: Manfrotto Mini Pixi Tripod
+.. slug: 2019-02-14-manfrotto-mini-pixi-tripod
+.. date: 2019-02-14 11:00:33 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+*@@html: <a href="/images/manfrotto_tripod.jpg" class="rounded
+float-left"alt="Manfrotto Pixi"><img src="/images/manfrotto_tripod.thumbnail.jpg"></a>@@*
+
+I have recently bought a Osmo Pocket and want to make some videos that require
+the Osmo to be mounted on a tripod. I already have a Velbon full sized tripod, that
+belonged to my father, which I could use. I want to use the Osmo on some
+mountain walks and to record some climbing. In the past I have carted the
+Velbon strapped to the outside of my rucksack, but the extra weight has put me
+off taking it with me on a regular basis. I have also got a Gorilla Pod clone,
+which is good on uneven ground, but isn't particularly stable.
+
+There are lots of mini tripods available on Amazon, but I noticed the Manfrotto
+Pixi was on sale for £12.50. Full sized Manfrotto tripods have a good
+reputation, so I decided to purchase the Mini Pixi. The legs are non extendable
+and have a small rubber pod at the ends of the feet that help to stop the
+tripod sliding on slippy surfaces. When the legs are closed you can use the
+tripod as a grip.
+
+Like many other mini tripods there is a ball and socket joint that allows you
+to tilt and pan the camera. To tilt and pan you press the small button and
+rotate the head to the desired position than simply let the button go to lock
+the head. This makes it much easier to adjust the position of the head
+accurately unlike systems which require you to manually tighten a friction
+joint.
+
+I tried the tripod my Canon DSLR with a standard lens and it was stable, so it
+should be OK with any compact camera or phone. It costs £19.50 on Amazon at the
+moment, but I was lucky enough to pick it up in a flash sale for £12.70.
+
+[[https://amzn.to/2IeCiiQ][Amazon link]]
