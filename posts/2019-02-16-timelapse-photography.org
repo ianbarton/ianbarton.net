@@ -1,0 +1,128 @@
+#+BEGIN_COMMENT
+.. title: Timelapse Photography Using a DSLR, GoPro or Osmo Pocket
+.. slug: 2019-02-16-timelapse-photography
+.. date: 2019-02-16 16:52:35 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+I recently bought a DJI Osmo, which has a built in Interval Timer mode, which
+re-ignited my interest in making time lapse videos. The Osmo makes this very
+easy: you just set the timer interval, which determines the interval at which the Osmo takes
+a JPEG and the length of time you want it to continue taking pictures. At the
+end of the elapsed time (you can interrupt it earlier if you wish) it combines
+the individual JPEG files into an mp4 video. It also saves the individual JPEG
+files, so you can process them separately.
+
+Previously I have used a GoPro (built in interval timer), a RaspberryPi (uses
+cron as an interval timer), or a DSLR with an external Interval Timer to make
+time lapses. Interval timers are available for a variety of cameras and are
+relatively cheap (around £13). The Amazon link shows the one I use with my
+Canon DSLR. [[https://amzn.to/2SVkiyV][Amazon link to interval timer]]
+
+You will also require some sort of stable mount for the camera. Traditionally
+this would be a tripod. However, I like making time lapses in the mountains and
+don't really want to lug 10kg of tripod for several hours up a mountain in
+addition to all my camping gear. If the terrain is rocky you can usually find a
+convenient rock or trig point which you can use to perch a mini tripod. If the
+ground is grassy I have a lash up of various GoPro adaptors attached to a
+walking pole, which I push into the ground.
+
+Making a time lapse of a sunset or sunrise requires quite a lot of planning and
+a lot of luck with the weather. First you need to work out what time the sun
+rises and sets. Most smartphone weather apps will have this
+information. Secondly you will need to find a location that provides an
+unobstructed view of the horizon. Bear in mind that the sunrise and sunset will
+move across the horizon between the two equinoxes according to the date.
+
+Next you need to decide on the time interval at which you want to take a
+photograph. I have found around 5 seconds to work for me. It doesn't matter if
+you take too many photographs, but it does if you don't take enough! I would
+suggest that you start recording at least an hour before sunset. It's also
+worth continuing to take photos for at least an hour after the official sunset
+time. Once the sun has gone below the horizon you will often get an alpenglow
+effect, which can last quite some time.
+
+You should now have an SD card with hundreds of images on it. There are a
+number of methods of creating an mp4 file from the images. I use a combination
+of ffmpeg and mencoder. I think these are available for most platforms, they
+definitely work on Linux and Mac OS. Ffmpeg is the Swiss Army knife of video
+processing tools. It's under constant development and the developer has been
+known to change the syntax of the command line options at a whim.
+
+This is a link to "FFMPEG An Intermediate Guide/image sequence":
+
+https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence
+
+I use ffmpeg to combine the individual jpegs into an mp4 video. Your jpegs will
+almost certainly be numbered with a suffix that increases by one for each
+successive photo, so you can automate the process using a script or batch file.
+
+Once you have created the mp4 you will probably find the mp4 file created from
+several hundred jpeg images is only a few seconds long. You can use mencoder to
+create a slow motion version of the mp4 video. Finally, you may want to add
+some background music to your video. You can use ffmpeg to add an mp3 track
+which adds the audio, but stops when it runs out of video to process.
+
+
+For full details about creating mp4 files from individual JPEGs, slowing down
+the video and adding an audio track see my blog post at:
+
+**  Concatenating JPEG Files Into an mp4 File.
+
+  If your JPEG file names end in a number, you can use the "-start_number"
+  command line option:
+
+  #+begin_src  shell
+ffmpeg -start_number n -i test_%d.jpg -vcodec mpeg4 test.mp4
+  #+end_src
+
+  Note, this will work as long as the sequence is unbroken once it starts. If
+  there are gaps and you want all of the stills included, then renumbering may be
+  necessary to fill the gaps.
+
+***   GoPro ffmpeg Command Line.
+
+   This is the script I use with my GoPro. It creates a 1080p file from a JPEG. The %d is a placeholder for a number, so
+   files starting from G0017096.JPG will be concatenated to make the video.
+
+   #+begin_src  shell
+ffmpeg -f image2 -r 1 -start_number 17096 -i G00%d.JPG   -s hd1080 -vcodec libx264 timelapse_1080P.mp4
+   #+end_src
+
+** Using mencoder to Create a "Slow" Version of the Video.
+This example slows the video down by 50% at 25 frames per second.
+
+ #+begin_src shell
+mencoder -speed 0.5 -ofps 25 -ovc copy Flapse_25fps.mp4 -o slower.mp4
+ #+end_src
+** Adding Background Music.
+There are several ways to do this. If your video is longer than the background
+music track, you probably want the music to loop until it reaches the end of
+the video.
+
+ffmpeg has the promising -loop_input flag, but it doesn't support audio inputs
+ yet.
+
+ #+begin_src  shell
+ffmpeg -i input_file.mp4 -i bgmusic12\ \(dreams\).mp3 -map 0:0 -map 1:0 -codec copy  -shortest output_video.mp4
+
+ #+end_src
+
+ I'd recommend sox and the -shortest option for ffmpeg as a solution.
+
+ #+begin_src  shell
+sox -i short_audio.mp3 looped_audio.mp3 repeat 1000 # adjust count as necessary
+ffmpeg -i input_video.mp4 -i looped_audio.mp3 -shortest output_video.mp4
+ #+end_src
+
+ The sox command will loop the input, and the ffmpeg command will use it for
+ the audio, but stop when it runs out of video to process.
+
+ -i parameter is deprecated in sox. Is is properly to use -e ima-adpcm instead.
+
+There are several sources of free background music on the Internet. For
+example:  [[https://longzijun.wordpress.com/2010/05/28/free-background-music/][background music]]
