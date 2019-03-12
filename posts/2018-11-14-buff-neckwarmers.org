@@ -8,6 +8,9 @@
 .. description
 .. type: text
 #+END_COMMENT
+
+*@@html: <a href="/images/buff.jpg" class="rounded float-left" alt="Polar Buff"><img src="/images/buff.thumbnail.jpg"></a>@@*
+
 These are a "Premium" product and priced accordingly. However, if you search
 for "neck warmer", you can find many cheaper clones.
 
@@ -20,3 +23,5 @@ There are many different patterns/styles. I think we have about six of them in
 our family.
 
 Note the standard Buff is a simple tube, not the balaclava shown in the link.
+
+[[https://amzn.to/2CcIUZU][Amazon link:]]
