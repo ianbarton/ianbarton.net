@@ -18,7 +18,7 @@ NIKOLA_SHOW_TRACEBACKS=1
 
 # Data about this site
 BLOG_AUTHOR = "Ian Barton."  # (translatable)
-BLOG_TITLE = "Ian's Mutterings."  # (translatable)
+BLOG_TITLE = "Ian's Tech Ramblings."  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://ianbarton.net/"
@@ -26,7 +26,7 @@ SITE_URL = "https://ianbarton.net/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://ianbarton.net/"
 BLOG_EMAIL = "ian@ianbarton.net"
-BLOG_DESCRIPTION = "Ian's Ramblings."  # (translatable)
+BLOG_DESCRIPTION = "Ian's Tech Ramblings."  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -1188,7 +1188,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # Or a DuckDuckGo search: https://duckduckgo.com/search_box.html
 # Default is no search form.
 # (translatable)
-SEARCH_FORM = "https://www.google.com/cse/"
+# SEARCH_FORM = "https://www.google.com/cse/"
 #
 # This search form works for any site and looks good in the "site" theme where
 # it appears on the navigation bar:
@@ -1407,13 +1407,25 @@ THEME_CONFIG = {
         'sidebar':
 
        """ <div class="sidebar-module sidebar-module-inset">
-       <a href="https://www.google.com/cse/">Search</a>
-  <h4>About</h4>
-  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
-  And this sidebar is completely customizable — you can put anything you want
-  here!</p>
+<h4>Search </h4>
+<!-- Google custom search -->
+<form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="%s">
+</form>
+<!-- End of custom search -->
+
+  <h4><a href="/pages/about/index.html">About.</a></h4>
+
 </div>
 <div class="sidebar-module">
+
+
   <h4>Links</h4>
   <ol class="list-unstyled">
     <li><a href="/categories/index.html">Tags</a></li>
