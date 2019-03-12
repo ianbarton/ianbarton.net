@@ -1,5 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Mutterings. (Posts about whateverworks)</title><link>https://ianbarton.net/</link><description></description><atom:link href="https://ianbarton.net/categories/whateverworks.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Thu, 14 Feb 2019 12:53:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Manfrotto Mini Pixi Tripod</title><link>https://ianbarton.net/posts/2019-02-14-manfrotto-mini-pixi-tripod/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Tech Ramblings. (Posts about whateverworks)</title><link>https://ianbarton.net/</link><description></description><atom:link href="https://ianbarton.net/categories/whateverworks.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Tue, 12 Mar 2019 12:55:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Amazon Smart Plugs.</title><link>https://ianbarton.net/posts/2019-03-10-amazon-smart-plugs/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+&lt;b&gt; &lt;a href="https://ianbarton.net/images/amazon_smart_plug.jpg" class="rounded
+float-left" alt="Amazon smart plug"&gt;&lt;img src="https://ianbarton.net/images/amazon_smart_plug.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+We have had a couple of Echo Dots and an Echo speaker for a couple of
+years. However, we don't have any "Smart gadgets". Something to turn off the
+lights would be useful, as other family members think that lights have an "On"
+switch, but it has no "Off" function. However, all our switches are brass and
+most of the bulbs are candles, for which there don't seem to be any aesthetically
+pleasing smart versions.
+&lt;/p&gt;
+
+&lt;p&gt;
+However, we do have quite a few power strips with things like computer charging
+bricks and TV's plugged in, which don't need to be powered up overnight. The
+TECKIN WiFi Smart Plug works both with Alexa and Google Home (not tested as I
+don't have a Google Home device). You can control the sockets either by using
+Alexa, or via the app. The app also allows you to turn the sockets on and off
+and depending on your Internet setup you can do this if you only have a mobile
+connection. You can also set up schedules and timers for the plug.
+&lt;/p&gt;
+
+&lt;p&gt;
+So far they have been very reliable and easy to set up. My only concern is that
+the Smart Life app does require quite a few permissions and wants to know your
+location.
+&lt;/p&gt;
+
+
+&lt;p&gt;
+&lt;a href="https://amzn.to/2Hmxd5Y"&gt;Amazon link.&lt;/a&gt;
+&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2019-03-10-amazon-smart-plugs/</guid><pubDate>Sun, 10 Mar 2019 17:59:11 GMT</pubDate></item><item><title>Timelapse Photography Using a DSLR, GoPro or Osmo Pocket</title><link>https://ianbarton.net/posts/2019-02-16-timelapse-photography/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+I recently bought a DJI Osmo, which has a built in Interval Timer mode, which
+re-ignited my interest in making time lapse videos. The Osmo makes this very
+easy: you just set the timer interval, which determines the interval at which the Osmo takes
+a JPEG and the length of time you want it to continue taking pictures. At the
+end of the elapsed time (you can interrupt it earlier if you wish) it combines
+the individual JPEG files into an mp4 video. It also saves the individual JPEG
+files, so you can process them separately.
+&lt;/p&gt;
+
+&lt;p&gt;
+Previously I have used a GoPro (built in interval timer), a RaspberryPi (uses
+cron as an interval timer), or a DSLR with an external Interval Timer to make
+time lapses. Interval timers are available for a variety of cameras and are
+relatively cheap (around £13). The Amazon link shows the one I use with my
+Canon DSLR. &lt;a href="https://amzn.to/2SVkiyV"&gt;Amazon link to interval timer&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+You will also require some sort of stable mount for the camera. Traditionally
+this would be a tripod. However, I like making time lapses in the mountains and
+don't really want to lug 10kg of tripod for several hours up a mountain in
+addition to all my camping gear. If the terrain is rocky you can usually find a
+convenient rock or trig point which you can use to perch a mini tripod. If the
+ground is grassy I have a lash up of various GoPro adaptors attached to a
+walking pole, which I push into the ground.
+&lt;/p&gt;
+
+&lt;p&gt;
+Making a time lapse of a sunset or sunrise requires quite a lot of planning and
+a lot of luck with the weather. First you need to work out what time the sun
+rises and sets. Most smartphone weather apps will have this
+information. Secondly you will need to find a location that provides an
+unobstructed view of the horizon. Bear in mind that the sunrise and sunset will
+move across the horizon between the two equinoxes according to the date.
+&lt;/p&gt;
+
+&lt;p&gt;
+Next you need to decide on the time interval at which you want to take a
+photograph. I have found around 5 seconds to work for me. It doesn't matter if
+you take too many photographs, but it does if you don't take enough! I would
+suggest that you start recording at least an hour before sunset. It's also
+worth continuing to take photos for at least an hour after the official sunset
+time. Once the sun has gone below the horizon you will often get an alpenglow
+effect, which can last quite some time.
+&lt;/p&gt;
+
+&lt;p&gt;
+You should now have an SD card with hundreds of images on it. There are a
+number of methods of creating an mp4 file from the images. I use a combination
+of ffmpeg and mencoder. I think these are available for most platforms, they
+definitely work on Linux and Mac OS. Ffmpeg is the Swiss Army knife of video
+processing tools. It's under constant development and the developer has been
+known to change the syntax of the command line options at a whim.
+&lt;/p&gt;
+
+&lt;p&gt;
+This is a link to "FFMPEG An Intermediate Guide/image sequence":
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href="https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence"&gt;https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I use ffmpeg to combine the individual jpegs into an mp4 video. Your jpegs will
+almost certainly be numbered with a suffix that increases by one for each
+successive photo, so you can automate the process using a script or batch file.
+&lt;/p&gt;
+
+&lt;p&gt;
+Once you have created the mp4 you will probably find the mp4 file created from
+several hundred jpeg images is only a few seconds long. You can use mencoder to
+create a slow motion version of the mp4 video. Finally, you may want to add
+some background music to your video. You can use ffmpeg to add an mp3 track
+which adds the audio, but stops when it runs out of video to process.
+&lt;/p&gt;
+
+
+&lt;p&gt;
+For full details about creating mp4 files from individual JPEGs, slowing down
+the video and adding an audio track see my blog post at:
+&lt;/p&gt;
+
+&lt;div id="outline-container-org44ff15a" class="outline-2"&gt;
+&lt;h2 id="org44ff15a"&gt;Concatenating JPEG Files Into an mp4 File.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org44ff15a"&gt;
+&lt;p&gt;
+Tools required:
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;ffmpeg&lt;/li&gt;
+
+&lt;li&gt;mencoder&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+sox
+&lt;/p&gt;
+
+&lt;p&gt;
+If your JPEG file names end in a number, you can use the "-start&lt;sub&gt;number&lt;/sub&gt;"
+command line option:
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  ffmpeg -start_number n -i test_%d.jpg -vcodec mpeg4 test.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+Note, this will work as long as the sequence is unbroken once it starts. If
+there are gaps and you want all of the stills included, then renumbering may be
+necessary to fill the gaps.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgc3ece9a" class="outline-3"&gt;
+&lt;h3 id="orgc3ece9a"&gt;GoPro ffmpeg Command Line.&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc3ece9a"&gt;
+&lt;p&gt;
+This is the script I use with my GoPro. It creates a 1080p file from a JPEG. The %d is a placeholder for a number, so
+files starting from G0017096.JPG will be concatenated to make the video.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   ffmpeg -f image2 -r 1 -start_number 17096 -i G00%d.JPG   -s hd1080 -vcodec libx264 timelapse_1080P.mp4
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org2cd27d2" class="outline-2"&gt;
+&lt;h2 id="org2cd27d2"&gt;Using mencoder to Create a "Slow" Version of the Video.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2cd27d2"&gt;
+&lt;p&gt;
+This example slows the video down by 50% at 25 frames per second.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; mencoder -speed 0.5 -ofps 25 -ovc copy Flapse_25fps.mp4 -o slower.mp4
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orge8c7cf3" class="outline-2"&gt;
+&lt;h2 id="orge8c7cf3"&gt;Adding Background Music.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge8c7cf3"&gt;
+&lt;p&gt;
+There are several ways to do this. If your video is longer than the background
+music track, you probably want the music to loop until it reaches the end of
+the video.
+&lt;/p&gt;
+
+&lt;p&gt;
+I'd recommend sox and the -shortest option for ffmpeg as a solution.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; sox -i short_audio.mp3 looped_audio.mp3 repeat 1000 # adjust count as necessary
+ ffmpeg -i input_video.mp4 -i looped_audio.mp3 -shortest output_video.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+The sox command will loop the input, and the ffmpeg command will use it for
+the audio, but stop when it runs out of video to process.
+&lt;/p&gt;
+
+&lt;p&gt;
+-i parameter is deprecated in sox. Is is properly to use -e ima-adpcm instead.
+&lt;/p&gt;
+
+&lt;p&gt;
+There are several sources of free background music on the Internet. For
+example:  &lt;a href="https://longzijun.wordpress.com/2010/05/28/free-background-music/"&gt;background music&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2019-02-16-timelapse-photography/</guid><pubDate>Sat, 16 Feb 2019 16:52:35 GMT</pubDate></item><item><title>Manfrotto Mini Pixi Tripod</title><link>https://ianbarton.net/posts/2019-02-14-manfrotto-mini-pixi-tripod/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
 &lt;b&gt; &lt;a href="https://ianbarton.net/images/manfrotto_tripod.jpg" class="rounded
 float-left" alt="Manfrotto Pixi"&gt;&lt;img src="https://ianbarton.net/images/manfrotto_tripod.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/b&gt;
 &lt;/p&gt;
@@ -249,30 +453,4 @@ price.
 
 &lt;p&gt;
 &lt;a href="https://www.citybikewien.at/en/"&gt;https://www.citybikewien.at/en/&lt;/a&gt;
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-citibikes-vienna/</guid><pubDate>Thu, 15 Nov 2018 12:05:35 GMT</pubDate></item><item><title>Self Assembly Flat Pack Furniture</title><link>https://ianbarton.net/posts/2018-11-15-self-assembly-flat-pack-furniture/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
-Self Assembly Furniture.  +Ted Salmon You need to hire my 17 year old
-daughter:) She is an absolute wizard. Wardrobes, desks, cupboards, etc. Give
-her a few tools and come back in a couple of hours to view the finished
-product. For some weird reason she enjoys doing it.
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-self-assembly-flat-pack-furniture/</guid><pubDate>Thu, 15 Nov 2018 12:03:58 GMT</pubDate></item><item><title>Lint and Fluff Roller.</title><link>https://ianbarton.net/posts/2018-11-15-lint-and-fluff-roller/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
-&lt;b&gt; &lt;a href="https://ianbarton.net/images/lint_roller.jpg" class="rounded float-left" alt="Thermos"&gt;&lt;img src="https://ianbarton.net/images/lint_roller.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-In a house full of cats and a dog, clothes quickly get covered with various cat
-and dog hairs. Lazy people like me just ignore them. However, the female
-members of the household are much fussier :) These lint rollers are very
-effective at getting off animal hairs from your clothes.
-&lt;/p&gt;
-
-&lt;p&gt;
-They come with a roll of "sticky tape" in perforated sections. You tear off a
-section and wrap it around the roller. The run the roller over your clothes and
-the hairs will automagically stick to it. If you stick a plastic bag over the
-roller when you have finished, you can get multiple uses from each sticky tape.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;a href="https://amzn.to/2TA3No6"&gt;
-Amazon link&lt;/a&gt;
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-lint-and-fluff-roller/</guid><pubDate>Thu, 15 Nov 2018 12:02:34 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-citibikes-vienna/</guid><pubDate>Thu, 15 Nov 2018 12:05:35 GMT</pubDate></item></channel></rss>

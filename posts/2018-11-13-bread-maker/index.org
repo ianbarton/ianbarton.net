@@ -11,7 +11,7 @@
 
 *@@html: <a href="/images/bread_maker.jpg" class="rounded float-left" alt="Bread maker"><img src="/images/bread_maker.thumbnail.jpg"></a>@@*
 
-We have had several attempts at making our own bread, but it'sntime consuming
+We have had several attempts at making our own bread, but it's time consuming
 and results are variable. I have often thought about buying a bread maker, but
 assumed they would be very expensive. However, looking at Amazon there are
 several available at around £50. I decided to buy one knowing it would be easy

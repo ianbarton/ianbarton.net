@@ -2,9 +2,9 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Ian's Ramblings.">
+<meta name="description" content="Ian's Tech Ramblings.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ian's Mutterings. (old posts, page 3) | Ian's Mutterings.</title>
+<title>Ian's Tech Ramblings. (old posts, page 3) | Ian's Tech Ramblings.</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
@@ -26,13 +26,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
-                https://www.google.com/cse/
+                
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
             <a class="navbar-brand blog-header-logo text-dark" href="https://ianbarton.net/">
 
-            <span id="blog-title">Ian's Mutterings.</span>
+            <span id="blog-title">Ian's Tech Ramblings.</span>
         </a>
           </div>
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
@@ -425,13 +425,25 @@ have a two bar, it will fit any vehicle, unlike many other cycle carriers.
 <!--End of body content-->
 </div>
 <aside class="col-md-4 blog-sidebar"><div class="sidebar-module sidebar-module-inset">
-       <a href="https://www.google.com/cse/">Search</a>
-  <h4>About</h4>
-  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
-  And this sidebar is completely customizable — you can put anything you want
-  here!</p>
+<h4>Search </h4>
+<!-- Google custom search -->
+<form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" name="q" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-primary">
+	<span class="glyphicon glyphicon-search"></span>
+</button>
+<input type="hidden" name="sitesearch" value="%s">
+</form>
+<!-- End of custom search -->
+
+  <h4><a href="pages/about/index.html">About.</a></h4>
+
 </div>
 <div class="sidebar-module">
+
+
   <h4>Links</h4>
   <ol class="list-unstyled">
 <li><a href="categories/index.html">Tags</a></li>

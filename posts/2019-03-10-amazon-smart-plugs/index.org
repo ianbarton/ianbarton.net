@@ -1,0 +1,36 @@
+#+BEGIN_COMMENT
+.. title: Amazon Smart Plugs.
+.. slug: 2019-03-10-amazon-smart-plugs
+.. date: 2019-03-10 17:59:11 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+
+*@@html: <a href="/images/amazon_smart_plug.jpg" class="rounded
+float-left"alt="Amazon smart plug"><img src="/images/amazon_smart_plug.thumbnail.jpg"></a>@@*
+
+We have had a couple of Echo Dots and an Echo speaker for a couple of
+years. However, we don't have any "Smart gadgets". Something to turn off the
+lights would be useful, as other family members think that lights have an "On"
+switch, but it has no "Off" function. However, all our switches are brass and
+most of the bulbs are candles, for which there don't seem to be any aesthetically
+pleasing smart versions.
+
+However, we do have quite a few power strips with things like computer charging
+bricks and TV's plugged in, which don't need to be powered up overnight. The
+TECKIN WiFi Smart Plug works both with Alexa and Google Home (not tested as I
+don't have a Google Home device). You can control the sockets either by using
+Alexa, or via the app. The app also allows you to turn the sockets on and off
+and depending on your Internet setup you can do this if you only have a mobile
+connection. You can also set up schedules and timers for the plug.
+
+So far they have been very reliable and easy to set up. My only concern is that
+the Smart Life app does require quite a few permissions and wants to know your
+location.
+
+
+[[https://amzn.to/2Hmxd5Y][Amazon link.]]

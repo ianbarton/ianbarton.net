@@ -1,0 +1,14 @@
+#+BEGIN_COMMENT
+.. title: About
+.. slug: about
+.. date: 2019-03-10 12:43:34 UTC
+.. tags:
+.. category:
+.. link:
+.. description:
+.. type: text
+#+END_COMMENT
+
+This site is for my various thoughts about the tech. I use. I have also
+imported all my Google Plus posts from the Whatever Works Group. You can now
+find Whatever Works on [[https://mewe.com/group/5bbc4aa3a5f4e532eb54fcb4][MeWe]]
