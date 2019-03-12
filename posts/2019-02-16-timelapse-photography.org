@@ -73,6 +73,13 @@ the video and adding an audio track see my blog post at:
 
 **  Concatenating JPEG Files Into an mp4 File.
 
+Tools required:
+- ffmpeg
+
+- mencoder
+
+- sox
+
   If your JPEG file names end in a number, you can use the "-start_number"
   command line option:
 
@@ -103,14 +110,6 @@ mencoder -speed 0.5 -ofps 25 -ovc copy Flapse_25fps.mp4 -o slower.mp4
 There are several ways to do this. If your video is longer than the background
 music track, you probably want the music to loop until it reaches the end of
 the video.
-
-ffmpeg has the promising -loop_input flag, but it doesn't support audio inputs
- yet.
-
- #+begin_src  shell
-ffmpeg -i input_file.mp4 -i bgmusic12\ \(dreams\).mp3 -map 0:0 -map 1:0 -codec copy  -shortest output_video.mp4
-
- #+end_src
 
  I'd recommend sox and the -shortest option for ffmpeg as a solution.
 
