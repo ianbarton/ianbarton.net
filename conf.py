@@ -1421,6 +1421,7 @@ THEME_CONFIG = {
 <!-- End of custom search -->
 
   <h4><a href="/pages/about/index.html">About.</a></h4>
+  <h4><a href="/pages/weather/index.html">Weather.</a></h4>
 
 </div>
 <div class="sidebar-module">
