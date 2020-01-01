@@ -1,0 +1,18 @@
+#+BEGIN_COMMENT
+.. title: Weather Forecasts.
+.. slug: weather
+.. date: 2020-01-01 01:43:34 UTC
+.. tags:
+.. category:
+.. link:
+.. description:
+.. type: text
+#+END_COMMENT
+
+Some links to weather forecast sites for mountain regions that I use regularly.
+
+- Mountain Weather Information (MWIS Snowdonia) [[http://www.mwis.org.uk/english-welsh-forecast/SD/][Mountain Weather Information
+  (Snowdonia)]]
+- [[http://www.mwis.org.uk/english-welsh-forecast/PD/][MWIS Peak District]]
+- [[http://www.mwis.org.uk/english-welsh-forecast/LD/][MWIS Lake District]]
+- [[https://www.sais.gov.uk/][Scottish Avalanche Information Service]]
