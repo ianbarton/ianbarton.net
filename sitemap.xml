@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://ianbarton.net/archive.html</loc>
-  <lastmod>2020-01-01T12:12:00Z</lastmod>
+  <lastmod>2020-01-01T12:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/categories/</loc>
@@ -83,7 +83,7 @@
  </url>
  <url>
   <loc>https://ianbarton.net/index-6.html</loc>
-  <lastmod>2020-01-01T12:12:00Z</lastmod>
+  <lastmod>2020-01-01T12:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/pages/about/</loc>
@@ -338,10 +338,6 @@
   <lastmod>2019-02-13T09:35:00Z</lastmod>
  </url>
  <url>
-  <loc>https://ianbarton.net/posts/2019-01-13-test/</loc>
-  <lastmod>2020-01-01T10:39:00Z</lastmod>
- </url>
- <url>
   <loc>https://ianbarton.net/posts/2019-01-28-honor-play/</loc>
   <lastmod>2019-02-13T09:35:00Z</lastmod>
  </url>
@@ -367,10 +363,6 @@
  </url>
  <url>
   <loc>https://ianbarton.net/posts/2020-01-01-test/</loc>
-  <lastmod>2020-01-01T10:41:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ianbarton.net/posts/2020-01-13-test/</loc>
   <lastmod>2020-01-01T10:41:00Z</lastmod>
  </url>
 </urlset>

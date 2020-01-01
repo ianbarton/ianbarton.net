@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Tech Ramblings. (Posts about whateverworks)</title><link>https://ianbarton.net/</link><description></description><atom:link href="https://ianbarton.net/categories/whateverworks.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 12:11:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Test</title><link>https://ianbarton.net/posts/2020-01-01-test/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
-Test.
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2020-01-01-test/</guid><pubDate>Wed, 01 Jan 2020 01:01:07 GMT</pubDate></item><item><title>SJ Cam 8 Pro Review.</title><link>https://ianbarton.net/posts/2019-04-24-sjcam-8-pro-review/</link><dc:creator>Ian Barton.</dc:creator><description></description><category>whateverworks</category><guid>https://ianbarton.net/posts/2019-04-24-sjcam-8-pro-review/</guid><pubDate>Wed, 24 Apr 2019 16:42:10 GMT</pubDate></item><item><title>Firefly 8SE Action Camera.</title><link>https://ianbarton.net/posts/2019-03-29-firefly-8SE-action-camera/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Tech Ramblings. (Posts about whateverworks)</title><link>https://ianbarton.net/</link><description></description><atom:link href="https://ianbarton.net/categories/whateverworks.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 12:32:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SJ Cam 8 Pro Review.</title><link>https://ianbarton.net/posts/2019-04-24-sjcam-8-pro-review/</link><dc:creator>Ian Barton.</dc:creator><description></description><category>whateverworks</category><guid>https://ianbarton.net/posts/2019-04-24-sjcam-8-pro-review/</guid><pubDate>Wed, 24 Apr 2019 16:42:10 GMT</pubDate></item><item><title>Firefly 8SE Action Camera.</title><link>https://ianbarton.net/posts/2019-03-29-firefly-8SE-action-camera/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
 I am a keen cyclist who rides mainly on country lanes. However, I do cycle
 through some of the local small towns. Most of the motorists are considerate
 and I usually get a cheery wave when I pull over to let them past on single
@@ -459,4 +457,15 @@ should use to power/recharge a particular bit of electronics.
 
 &lt;p&gt;
 &lt;a href="https://amzn.to/2Cf2IuE"&gt;Amazon link.&lt;/a&gt;
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-brother-p-labeller/</guid><pubDate>Thu, 15 Nov 2018 12:09:49 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-brother-p-labeller/</guid><pubDate>Thu, 15 Nov 2018 12:09:49 GMT</pubDate></item><item><title>Service Charges in Restaurants</title><link>https://ianbarton.net/posts/2018-11-15-service-charges-in-restaurants/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+Service Charges in Restaurants.  If I go to a restaurant, rather than a self
+service cafe, I can't avoid "Service". It's a non optional part of the
+experience. As such the price should be built into the price of the meal. If I
+get crap service, I simply won't go back to the same place again.
+&lt;/p&gt;
+
+&lt;p&gt;
+I don't think any other part of the economy has such a strange idea of selling
+you something that includes a service element. If I take my car into the garage
+I don't expect to pay an extra 10% because the mechanic did their job properly.
+&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-service-charges-in-restaurants/</guid><pubDate>Thu, 15 Nov 2018 12:08:16 GMT</pubDate></item></channel></rss>
