@@ -1,0 +1,466 @@
+---
+title: Creating a Wireless Access Point Using a RaspberryPi and a Mobile Phone.
+layout: post
+date: 2014-03-27
+tags: [emacs, archlinux, raspberrypi]
+category: blog
+---
+
+
+<!-- PELICAN_BEGIN_SUMMARY -->
+
+<p>
+My mobile phone plan allows me to tether the phone, so I can access
+the Internet in areas where there is no WiFi but have a good 3g
+connection. This post explains how to set up a RaspberryPi as a
+wireless access point, which is tethered to a mobile phone. Users can
+then connect to the WiFi and access the internet.
+</p>
+
+<!-- PELICAN_END_SUMMARY -->
+<p>
+If we are on holiday in a property that doesn't have WiFi it can be
+useful to set up a WiFi access point connected to a 3g mobile phone
+network, so family members can use the Internet. Note that not all
+mobile phone operators allow tethering, check first or you may end
+up either with a large bill, or being disconnected by your operator.
+</p>
+
+<p>
+I am using a RaspberryPi with <a href="http://archlinux.org/">ArchLinux</a> and an Android phone,
+connected to the Pi via a usb cable. I would advise using a powered
+hub as the phone and WiFi dongle will probably draw more current than
+the Pi's power supply can cope with.
+</p>
+
+<p>
+I have installed a dhcp server on the Pi. This manages connections to
+the Ethernet and the wireless network interfaces. The ethernet
+interface is on a different ip range (192.168.0.x) to the wireless
+interface (10.0.0.x). There are a couple of reasons for doing it this
+way:
+</p>
+
+<ul class="org-ul">
+<li>You can easily access the Pi by plugging an ethernet cable into your
+computer. If your computer's network card doesn't support auto
+crossovers, will need to use a hub to connect to the ethernet
+port.
+</li>
+<li>You can use the Pi as a router to connect to the Internet as part of
+a wired network. I find this useful at home as our ADSL connection
+is unreliable. I can just plug the Pi into our wired network and use
+it to access the internet.
+</li>
+</ul>
+
+
+
+<div id="outline-container-unnumbered-1" class="outline-2">
+<h2 id="unnumbered-1">Preflight Check.</h2>
+<div class="outline-text-2" id="text-unnumbered-1">
+</div><div id="outline-container-unnumbered-2" class="outline-3">
+<h3 id="unnumbered-2">Check that Your WiFi Card Can Act as an Access Point.</h3>
+<div class="outline-text-3" id="text-unnumbered-2">
+<p>
+Not all wireless cards can act as an access point. To check if yours
+can in a terminal:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">iwlist
+
+Supported interface modes:
+                 * IBSS
+                 * managed
+                 * AP
+                 * AP/VLAN
+                 * WDS
+                 * monitor
+                 * mesh point
+</pre>
+</div>
+
+<p>
+Look in the "Supported interface modes". If AP isn't listed your card
+can't act as an access point.
+</p>
+</div>
+</div>
+<div id="outline-container-unnumbered-3" class="outline-3">
+<h3 id="unnumbered-3">Power Supply.</h3>
+<div class="outline-text-3" id="text-unnumbered-3">
+<p>
+You will almost certainly need to use a powered USB hub as the
+combined WiFi dongle and Android phone will take more current than the
+Pi can supply.
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-unnumbered-4" class="outline-2">
+<h2 id="unnumbered-4">Installing Required Software.</h2>
+<div class="outline-text-2" id="text-unnumbered-4">
+<p>
+This assumes that you have installed the base Arch packages and have a
+working dhcp ethernet connection. You do not require a
+GUI to install/configure/run the router, you can do everything via
+ssh. However, you can install a GUI if you wish. For the purposes of
+this article my Pi has been given the host name "routerpi.bantercat.co.uk"
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman -S dhcp hostapd shorewall ppp modemmanager iw wpa_supplicant
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-5" class="outline-2">
+<h2 id="unnumbered-5">Using an Android Phone as a usb Modem.</h2>
+<div class="outline-text-2" id="text-unnumbered-5">
+<p>
+Some phones have the ability to tether via usb disabled by the network
+provider. I am assuming that your phone is able to tether. To check if
+you can tether plug your phone into a computer via the usb interface
+and go into Settings/Wireless and Networks/More/Tethering &amp; portable
+hotspot. If your phone allows tethering you should be able to tick the
+USB tethering checkbox.
+</p>
+
+<p>
+Unfortunately there is currently no method of automatically enabling
+tethering when you plug in the usb cable, so you will always need to
+enable this manually.
+</p>
+</div>
+
+<div id="outline-container-unnumbered-6" class="outline-3">
+<h3 id="unnumbered-6">Configuring a Network Interface for the Android Phone.</h3>
+<div class="outline-text-3" id="text-unnumbered-6">
+<p>
+You will need to create a netctl profile. I have called mine
+android-dhcp:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #268bd2;">Description</span>=<span style="color: #2aa198;">'A basic static Android tethering'</span>
+<span style="color: #268bd2;">Interface</span>=usb0
+<span style="color: #268bd2;">Connection</span>=ethernet
+<span style="color: #268bd2;">IP</span>=dhcp
+</pre>
+</div>
+
+<p>
+You will need to enable the profile:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo netctl enable android-dhcp
+</pre>
+</div>
+
+<p>
+You can test that the interface is working:
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-7" class="outline-2">
+<h2 id="unnumbered-7">Configuring the dhcp server.</h2>
+<div class="outline-text-2" id="text-unnumbered-7">
+<p>
+First we need to tell the dhcp server which interfaces to listen on.
+</p>
+
+<p>
+Edit /etc/conf.d/dhcp to add the wlan0 and eth0 interfaces.
+</p>
+
+<pre class="example">
+#
+# Arguments to be passed to the DHCP server daemon
+#
+
+# ipv4 runtime parameters
+DHCP4_ARGS="-q"
+
+# ipv6 runtime parameters
+DHCP6_ARGS="-q"
+
+INTERFACES="wlan0 eth0"
+</pre>
+
+<p>
+This is the main configuration file /etc/dhcpd.conf.
+</p>
+
+<pre class="example">
+ddns-update-style none;
+ignore client-updates;
+authoritative;
+option local-wpad code 252 = text;
+
+# This subnet is for the WiFi interface.
+
+subnet
+10.0.0.0 netmask 255.255.255.0 {
+# --- default gateway
+interface wlan0;
+option routers
+10.0.0.1;
+# --- Netmask
+option subnet-mask
+255.255.255.0;
+# --- Broadcast Address
+option broadcast-address
+10.0.0.255;
+# --- Domain name servers, tells the clients which DNS servers to use.
+option domain-name-servers
+10.0.0.1, 8.8.8.8, 8.8.4.4;
+option time-offset
+0;
+range 10.0.0.50 10.0.0.100;
+default-lease-time 1209600;
+max-lease-time 1814400;
+
+    host archpiwifi {
+         hardware ethernet 98:0c:82:db:5e:c8;
+         fixed-address 10.0.0.1;
+
+   }
+
+}
+
+
+# This subnet is for the ethernet interface.
+# If you want to use the Pi on a wired network
+# with en existing dhcp server, just comment
+# this section out.
+
+subnet
+192.168.0.0 netmask 255.255.255.0 {
+# --- default gateway
+interface eth0;
+option routers
+10.0.0.1;
+# --- Netmask
+option subnet-mask
+255.255.255.0;
+# --- Broadcast Address
+option broadcast-address
+192.168.0.255;
+# --- Domain name servers, tells the clients which DNS servers to use.
+option domain-name-servers
+10.0.0.1, 8.8.8.8, 8.8.4.4;
+option time-offset
+0;
+range 192.168.0.100 192.168.0.200;
+default-lease-time 1209600;
+max-lease-time 1814400;
+}
+</pre>
+
+<p>
+You can test that
+your file doesn't have any syntax errors by running:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">dchpd -t
+</pre>
+</div>
+
+<p>
+I am using ipv4, so we need to enable the dhcpd4 service and start it:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo systemctl enable dhcpd4.service
+sudo systemctl start dhcpd4.service
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-8" class="outline-2">
+<h2 id="unnumbered-8">Configuring the Wireless Interface and hostapd.</h2>
+<div class="outline-text-2" id="text-unnumbered-8">
+<p>
+I needed to setup a basic interface on wlan0 before hostapd starts. I
+did this using a systemd unit. I had quite a bit of trouble getting
+this to work properly and was greatly helped by <a href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=29&t=27005">this</a> post in the
+RaspberryPi forums. The systemd unit creates an interface with the
+address 10.0.0.1 on wlan0.
+</p>
+
+<p>
+Create the file /lib/systemd/system/wifi-hostapd.service
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">[Unit]
+<span style="color: #268bd2;">Description</span>=Add static ip for wireless
+<span style="color: #268bd2;">Before</span>=hostapd.service
+<span style="color: #268bd2;">Wants</span>=network.target
+<span style="color: #268bd2;">Before</span>=network.target
+<span style="color: #268bd2;">BindsTo</span>=sys-subsystem-net-devices-wlan0.device
+<span style="color: #268bd2;">After</span>=sys-subsystem-net-devices-wlan0.device
+
+[Service]
+<span style="color: #268bd2;">Type</span>=oneshot
+<span style="color: #268bd2;">ExecStart</span>=/usr/sbin/ip addr add 10.0.0.1/24 dev wlan0 brd + dev wlan0
+
+[Install]
+<span style="color: #268bd2;">WantedBy</span>=multi-user.target
+</pre>
+</div>
+
+<p>
+Don't forget to enable the service:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo systemctl wifi-hostapd.service
+</pre>
+</div>
+
+<p>
+Now edit /etc/hostapd/hostapd.conf:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #268bd2;">ssid</span>=yourssidname
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #586e75; font-style: italic;">Note must be between 8 and 63 characters long.</span>
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #586e75; font-style: italic;">Don't quote the string.</span>
+<span style="color: #268bd2;">wpa_passphrase</span>=A password with spaces
+<span style="color: #268bd2;">interface</span>=wlan0
+<span style="color: #268bd2;">bridge</span>=br0
+<span style="color: #268bd2;">auth_algs</span>=3
+<span style="color: #268bd2;">channel</span>=7
+<span style="color: #268bd2;">driver</span>=nl80211
+<span style="color: #268bd2;">hw_mode</span>=g
+<span style="color: #268bd2;">logger_stdout</span>=-1
+<span style="color: #268bd2;">logger_stdout_level</span>=2
+<span style="color: #268bd2;">max_num_sta</span>=5
+<span style="color: #268bd2;">rsn_pairwise</span>=CCMP
+<span style="color: #268bd2;">wpa</span>=2
+<span style="color: #268bd2;">wpa_key_mgmt</span>=WPA-PSK
+<span style="color: #268bd2;">wpa_pairwise</span>=TKIP CCMP
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-unnumbered-9" class="outline-2">
+<h2 id="unnumbered-9">Firewall and Routing.</h2>
+<div class="outline-text-2" id="text-unnumbered-9">
+<p>
+I have installed <a href="http://shorewall.org/">shorewall</a> which serves two purposes. It acts as a
+firewall and also routes traffic between the ethernet interface and
+the Internet.
+</p>
+
+<p>
+This isn't a shorewall tutorial and I am definitely not a firewall
+expert. The configuration files are just a basic set of rules to get
+you started. All traffic for networks outside the dhcp configured
+network for eth0, or wlan0 will be forwarded to the Android usb interface.
+</p>
+
+<p>
+The suggested configuration provides a very basic set of firewall
+rules that allows all traffic out of the Pi and restricts the traffic
+that can enter your network.
+</p>
+
+<p>
+NAT.
+</p>
+</div>
+
+<div id="outline-container-unnumbered-10" class="outline-3">
+<h3 id="unnumbered-10">Shorewall Configuration.</h3>
+<div class="outline-text-3" id="text-unnumbered-10">
+<p>
+It's very easy to lock yourself out of the server while setting up
+Shorewall. Until you are confident that you have configured your rules
+correctly I suggest that you test your configuration using the try command:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">shorewall try /etc/shorewall 1m
+</pre>
+</div>
+
+<p>
+This will start shorewall and enable all the rules for a period of one
+minute. When this time had elapsed shorewall will stop and restore the
+previous configuration.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-11" class="outline-2">
+<h2 id="unnumbered-11">Testing.</h2>
+<div class="outline-text-2" id="text-unnumbered-11">
+<p>
+Log in via the ethernet interface and try to ping the network address
+for the WiFi card:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">[ian@routerpi netctl]$ sudo ping 10.0.0.1
+[sudo] password for ian:
+PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.
+64 bytes from 10.0.0.1: <span style="color: #268bd2;">icmp_seq</span>=1 <span style="color: #268bd2;">ttl</span>=64 <span style="color: #268bd2;">time</span>=0.495 ms
+64 bytes from 10.0.0.1: <span style="color: #268bd2;">icmp_seq</span>=2 <span style="color: #268bd2;">ttl</span>=64 <span style="color: #268bd2;">time</span>=0.334 ms
+</pre>
+</div>
+
+<p>
+Now try and connect via the wireless AP that you have created. If this
+succeeds you should be allocated a network address in the range
+10.0.0.50 to 10.0.0.100.
+</p>
+</div>
+</div>
+<div id="outline-container-unnumbered-12" class="outline-2">
+<h2 id="unnumbered-12">Shorewall.</h2>
+<div class="outline-text-2" id="text-unnumbered-12">
+</div><div id="outline-container-unnumbered-13" class="outline-3">
+<h3 id="unnumbered-13">Interfaces.</h3>
+</div>
+<div id="outline-container-unnumbered-14" class="outline-3">
+<h3 id="unnumbered-14">masq</h3>
+</div>
+<div id="outline-container-unnumbered-15" class="outline-3">
+<h3 id="unnumbered-15">Policy.</h3>
+</div>
+<div id="outline-container-unnumbered-16" class="outline-3">
+<h3 id="unnumbered-16">Rules.</h3>
+</div>
+
+<div id="outline-container-unnumbered-17" class="outline-3">
+<h3 id="unnumbered-17">Routestopped.</h3>
+</div>
+<div id="outline-container-unnumbered-18" class="outline-3">
+<h3 id="unnumbered-18">shorewall.conf.</h3>
+</div>
+<div id="outline-container-unnumbered-19" class="outline-3">
+<h3 id="unnumbered-19">zones.</h3>
+</div>
+</div>

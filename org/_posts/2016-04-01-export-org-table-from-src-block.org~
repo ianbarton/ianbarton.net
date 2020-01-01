@@ -1,0 +1,38 @@
+#+AUTHOR: Ian Barton
+#+DATE: [2016-04-01 Fri]
+#+PROPERTY: MODIFIED:
+#+TITLE: Exporting an org-mode Table from a src Block.
+#+CATEGORY: Blog
+#+PROPERTY: TAGS emacs, org-mode
+#+SETUPFILE: ../setup.org
+
+A nice tip from John Kitchen on the org-mode mailing list. I would
+like to be able to export several org-mode tables to a csv file
+without having to visit each table in the buffer and export it manually.
+
+Try this:
+
+* Export table from src-block
+
+#+name: mytable
+| a | b |
+| 1 | 2 |
+| 3 | 4 |
+
+
+#+BEGIN_SRC emacs-lisp
+(save-excursion
+  (org-open-link-from-string "[[mytable]]")
+  (while (not (org-table-p)) (forward-line))
+  (org-table-export "mytable.csv" "orgtbl-to-csv"))
+#+END_SRC
+#+RESULTS:
+: Export done.
+
+#+BEGIN_SRC sh
+cat mytable.csv
+#+END_SRC
+#+RESULTS:
+: a,b
+: 1,2
+: 3,4
