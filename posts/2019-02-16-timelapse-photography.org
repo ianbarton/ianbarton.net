@@ -87,6 +87,11 @@ Tools required:
 ffmpeg -start_number n -i test_%d.jpg -vcodec mpeg4 test.mp4
   #+end_src
 
+G0010024.JPG
+  #+begin_src  shell
+ffmpeg  -start_number 10024 -i G00%d.JPG   -vcodec mpeg4 test.mp4
+  #+end_src
+
   Note, this will work as long as the sequence is unbroken once it starts. If
   there are gaps and you want all of the stills included, then renumbering may be
   necessary to fill the gaps.
