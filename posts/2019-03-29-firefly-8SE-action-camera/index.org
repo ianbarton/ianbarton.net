@@ -1,0 +1,69 @@
+#+BEGIN_COMMENT
+.. title: Firefly 8SE Action Camera.
+.. slug: 2019-03-29-firefly-8SE-action-camera
+.. date: 2019-03-29 14:59:22 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+I am a keen cyclist who rides mainly on country lanes. However, I do cycle
+through some of the local small towns. Most of the motorists are considerate
+and I usually get a cheery wave when I pull over to let them past on single
+track roads. Unfortunately, there are an increasing number of
+inconsiderate/incompetent motorists. In the last couple of weeks I have had a
+couple of very close shaves, which would have resulted in serious injury if I
+had been hit. So I decided to get some sort of action camera to record my
+rides. This won't prevent me from being injured, but at least I will have some
+sort of record of what happened. Also I can gather evidence of the small
+proportion of drivers who think passing you a few inches away at 60mph is good
+driving.
+
+I have got an old GoPro Hero3, which is a decent enough camera. However,
+battery life is very short at around 1hr and it can't be charged while in
+use. Also it doesn't have any image stabilization, so on our potholed roads
+it records very shaky footage. After doing some searching and looking at lots
+of YouTube reviews I decided to buy the Firefly 8SE. The Firefly has a couple
+of features that I required:
+
+- Can be used while recharging the battery.
+- Optical image stabilization
+
+I bought my camera from Amazon, although you can buy it direct slightly cheaper
+from places like Gearbest. The box contains a waterproof case
+
+- Microphone. Package includes a separate usb microphone (there is an internal
+  one too).
+- Battery life at around 100 minutes at 1080P.
+- Can be used whilst it is being recharged.
+- Can be set to record videos in short segments. If the memory card fills up,
+  the oldest clips will be deleted. So, it can be used as a dashcam.
+- Lots of clips, buckles and mounts included.
+- Can record in 4k
+- Software image stabilization at 1080P.
+- Minor niggle: recharging is via mini USB (presumably to be compatible with GoPro)
+- HDMI output
+- Various modes: car mode, timelapse, can save photos in RAW.
+
+The camera can't be recharged while it is in the waterproof case. New cases are
+inexpensive, so I intend to cut a small slot in the case so I can plug in the
+USB cable to recharge while riding. In anything except torrential rain this
+should be adequately water resistant.
+
+The image stabilization worked very well on our roads. Footage taken when the
+handlebars were juddering over badly surface road looked quite stable on the
+video. Most important I could easily read the number plates on passing cars.
+
+Some more minor niggles:
+- Touch screen can require a few prods to work.
+- Some button actions not very intuitive: you have to work out which of the
+  small buttons on the side you need to long press for 3 seconds to toggle the wifi.
+- Some of the included mounts and brackets are a bit fragile. You probably need
+  to buy some decent ones if you use them on a regular basis. I snapped one
+  bracket the second time I used it.
+- Some people complain about whining on the audio when the screen is turned
+  on. I haven't noticed this, but I don't really need to record audio.
+
+https://amzn.to/2CM9sBe

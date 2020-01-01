@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://ianbarton.net/</loc>
-  <lastmod>2019-03-10T12:44:00Z</lastmod>
+  <lastmod>2020-01-01T10:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/2017/</loc>
@@ -22,8 +22,12 @@
   <lastmod>2019-02-13T09:35:00Z</lastmod>
  </url>
  <url>
+  <loc>https://ianbarton.net/2020/</loc>
+  <lastmod>2020-01-01T10:41:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://ianbarton.net/archive.html</loc>
-  <lastmod>2019-03-12T12:55:00Z</lastmod>
+  <lastmod>2020-01-01T12:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/categories/</loc>
@@ -59,31 +63,35 @@
  </url>
  <url>
   <loc>https://ianbarton.net/index-1.html</loc>
-  <lastmod>2019-03-12T12:55:00Z</lastmod>
+  <lastmod>2020-01-01T12:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/index-2.html</loc>
-  <lastmod>2019-03-12T12:55:00Z</lastmod>
+  <lastmod>2020-01-01T12:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/index-3.html</loc>
-  <lastmod>2019-03-12T12:55:00Z</lastmod>
+  <lastmod>2020-01-01T12:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/index-4.html</loc>
-  <lastmod>2019-03-12T12:55:00Z</lastmod>
+  <lastmod>2020-01-01T12:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/index-5.html</loc>
-  <lastmod>2019-03-12T12:55:00Z</lastmod>
+  <lastmod>2020-01-01T12:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/index-6.html</loc>
-  <lastmod>2019-03-12T12:55:00Z</lastmod>
+  <lastmod>2020-01-01T12:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/pages/about/</loc>
   <lastmod>2019-03-10T12:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ianbarton.net/pages/weather/</loc>
+  <lastmod>2020-01-01T12:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/posts/2011-10-31-archlinux-mail-server/</loc>
@@ -330,6 +338,10 @@
   <lastmod>2019-02-13T09:35:00Z</lastmod>
  </url>
  <url>
+  <loc>https://ianbarton.net/posts/2019-01-13-test/</loc>
+  <lastmod>2020-01-01T10:39:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://ianbarton.net/posts/2019-01-28-honor-play/</loc>
   <lastmod>2019-02-13T09:35:00Z</lastmod>
  </url>
@@ -344,5 +356,21 @@
  <url>
   <loc>https://ianbarton.net/posts/2019-03-10-amazon-smart-plugs/</loc>
   <lastmod>2019-03-10T18:08:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ianbarton.net/posts/2019-03-29-firefly-8SE-action-camera/</loc>
+  <lastmod>2019-09-27T09:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ianbarton.net/posts/2019-04-24-sjcam-8-pro-review/</loc>
+  <lastmod>2019-09-27T09:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ianbarton.net/posts/2020-01-01-test/</loc>
+  <lastmod>2020-01-01T10:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://ianbarton.net/posts/2020-01-13-test/</loc>
+  <lastmod>2020-01-01T10:41:00Z</lastmod>
  </url>
 </urlset>

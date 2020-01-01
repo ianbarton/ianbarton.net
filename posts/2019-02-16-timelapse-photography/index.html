@@ -68,10 +68,11 @@ easy: you just set the timer interval, which ">
         <!--Body content-->
         
         
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Timelapse Photography Using a DSLR, GoPro or Osmo Pocket</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     Ian Barton.
             </span></p>
             <p class="dateline">
@@ -169,9 +170,9 @@ For full details about creating mp4 files from individual JPEGs, slowing down
 the video and adding an audio track see my blog post at:
 </p>
 
-<div id="outline-container-org44ff15a" class="outline-2">
-<h2 id="org44ff15a">Concatenating JPEG Files Into an mp4 File.</h2>
-<div class="outline-text-2" id="text-org44ff15a">
+<div id="outline-container-org14f916e" class="outline-2">
+<h2 id="org14f916e">Concatenating JPEG Files Into an mp4 File.</h2>
+<div class="outline-text-2" id="text-org14f916e">
 <p>
 Tools required:
 </p>
@@ -192,19 +193,24 @@ command line option:
 
 <div class="highlight"><pre><span></span>  ffmpeg -start_number n -i test_%d.jpg -vcodec mpeg4 test.mp4
 </pre></div>
+</li>
+</ul>
+<p>
+G0010024.JPG
+</p>
+<div class="highlight"><pre><span></span>  ffmpeg  -start_number 10024 -i G00%d.JPG   -vcodec mpeg4 test.mp4
+</pre></div>
 
 <p>
 Note, this will work as long as the sequence is unbroken once it starts. If
 there are gaps and you want all of the stills included, then renumbering may be
 necessary to fill the gaps.
 </p>
-</li>
-</ul>
 </div>
 
-<div id="outline-container-orgc3ece9a" class="outline-3">
-<h3 id="orgc3ece9a">GoPro ffmpeg Command Line.</h3>
-<div class="outline-text-3" id="text-orgc3ece9a">
+<div id="outline-container-org3bd4cb1" class="outline-3">
+<h3 id="org3bd4cb1">GoPro ffmpeg Command Line.</h3>
+<div class="outline-text-3" id="text-org3bd4cb1">
 <p>
 This is the script I use with my GoPro. It creates a 1080p file from a JPEG. The %d is a placeholder for a number, so
 files starting from G0017096.JPG will be concatenated to make the video.
@@ -216,9 +222,9 @@ files starting from G0017096.JPG will be concatenated to make the video.
 </div>
 </div>
 
-<div id="outline-container-org2cd27d2" class="outline-2">
-<h2 id="org2cd27d2">Using mencoder to Create a "Slow" Version of the Video.</h2>
-<div class="outline-text-2" id="text-org2cd27d2">
+<div id="outline-container-org60e2a32" class="outline-2">
+<h2 id="org60e2a32">Using mencoder to Create a "Slow" Version of the Video.</h2>
+<div class="outline-text-2" id="text-org60e2a32">
 <p>
 This example slows the video down by 50% at 25 frames per second.
 </p>
@@ -227,9 +233,9 @@ This example slows the video down by 50% at 25 frames per second.
 </pre></div>
 </div>
 </div>
-<div id="outline-container-orge8c7cf3" class="outline-2">
-<h2 id="orge8c7cf3">Adding Background Music.</h2>
-<div class="outline-text-2" id="text-orge8c7cf3">
+<div id="outline-container-org938e085" class="outline-2">
+<h2 id="org938e085">Adding Background Music.</h2>
+<div class="outline-text-2" id="text-org938e085">
 <p>
 There are several ways to do this. If your video is longer than the background
 music track, you probably want the music to loop until it reaches the end of
@@ -287,6 +293,7 @@ example:  <a href="https://longzijun.wordpress.com/2010/05/28/free-background-mu
 <!-- End of custom search -->
 
   <h4><a href="../../pages/about/index.html">About.</a></h4>
+  <h4><a href="../../pages/weather/index.html">Weather.</a></h4>
 
 </div>
 <div class="sidebar-module">
@@ -305,17 +312,15 @@ example:  <a href="https://longzijun.wordpress.com/2010/05/28/free-background-mu
 </div>
 
         <footer id="footer">
-            Contents © 2019         <a href="mailto:ian@ianbarton.net">Ian Barton.</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:ian@ianbarton.net">Ian Barton.</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
             
         </footer>
 </div>
 </div>
 
 
-        <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates --><script>
+        <script src="../../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element) {

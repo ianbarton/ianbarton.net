@@ -1,0 +1,10 @@
+#+BEGIN_COMMENT
+.. title: SJ Cam 8 Pro Review.
+.. slug: 2019-04-24-sjcam-8-pro-review
+.. date: 2019-04-24 17:42:10 BST
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT

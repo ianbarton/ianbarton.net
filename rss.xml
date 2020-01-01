@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Tech Ramblings.</title><link>https://ianbarton.net/</link><description>Ian's Tech Ramblings.</description><atom:link href="https://ianbarton.net/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Tue, 12 Mar 2019 12:55:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Amazon Smart Plugs.</title><link>https://ianbarton.net/posts/2019-03-10-amazon-smart-plugs/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ian's Tech Ramblings.</title><link>https://ianbarton.net/</link><description>Ian's Tech Ramblings.</description><atom:link href="https://ianbarton.net/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:ian@ianbarton.net"&gt;Ian Barton.&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 12:11:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Test</title><link>https://ianbarton.net/posts/2020-01-01-test/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+Test.
+&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2020-01-01-test/</guid><pubDate>Wed, 01 Jan 2020 01:01:07 GMT</pubDate></item><item><title>SJ Cam 8 Pro Review.</title><link>https://ianbarton.net/posts/2019-04-24-sjcam-8-pro-review/</link><dc:creator>Ian Barton.</dc:creator><description></description><category>whateverworks</category><guid>https://ianbarton.net/posts/2019-04-24-sjcam-8-pro-review/</guid><pubDate>Wed, 24 Apr 2019 16:42:10 GMT</pubDate></item><item><title>Firefly 8SE Action Camera.</title><link>https://ianbarton.net/posts/2019-03-29-firefly-8SE-action-camera/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
+I am a keen cyclist who rides mainly on country lanes. However, I do cycle
+through some of the local small towns. Most of the motorists are considerate
+and I usually get a cheery wave when I pull over to let them past on single
+track roads. Unfortunately, there are an increasing number of
+inconsiderate/incompetent motorists. In the last couple of weeks I have had a
+couple of very close shaves, which would have resulted in serious injury if I
+had been hit. So I decided to get some sort of action camera to record my
+rides. This won't prevent me from being injured, but at least I will have some
+sort of record of what happened. Also I can gather evidence of the small
+proportion of drivers who think passing you a few inches away at 60mph is good
+driving.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have got an old GoPro Hero3, which is a decent enough camera. However,
+battery life is very short at around 1hr and it can't be charged while in
+use. Also it doesn't have any image stabilization, so on our potholed roads
+it records very shaky footage. After doing some searching and looking at lots
+of YouTube reviews I decided to buy the Firefly 8SE. The Firefly has a couple
+of features that I required:
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Can be used while recharging the battery.&lt;/li&gt;
+&lt;li&gt;Optical image stabilization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+I bought my camera from Amazon, although you can buy it direct slightly cheaper
+from places like Gearbest. The box contains a waterproof case
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Microphone. Package includes a separate usb microphone (there is an internal
+one too).&lt;/li&gt;
+&lt;li&gt;Battery life at around 100 minutes at 1080P.&lt;/li&gt;
+&lt;li&gt;Can be used whilst it is being recharged.&lt;/li&gt;
+&lt;li&gt;Can be set to record videos in short segments. If the memory card fills up,
+the oldest clips will be deleted. So, it can be used as a dashcam.&lt;/li&gt;
+&lt;li&gt;Lots of clips, buckles and mounts included.&lt;/li&gt;
+&lt;li&gt;Can record in 4k&lt;/li&gt;
+&lt;li&gt;Software image stabilization at 1080P.&lt;/li&gt;
+&lt;li&gt;Minor niggle: recharging is via mini USB (presumably to be compatible with GoPro)&lt;/li&gt;
+&lt;li&gt;HDMI output&lt;/li&gt;
+&lt;li&gt;Various modes: car mode, timelapse, can save photos in RAW.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+The camera can't be recharged while it is in the waterproof case. New cases are
+inexpensive, so I intend to cut a small slot in the case so I can plug in the
+USB cable to recharge while riding. In anything except torrential rain this
+should be adequately water resistant.
+&lt;/p&gt;
+
+&lt;p&gt;
+The image stabilization worked very well on our roads. Footage taken when the
+handlebars were juddering over badly surface road looked quite stable on the
+video. Most important I could easily read the number plates on passing cars.
+&lt;/p&gt;
+
+&lt;p&gt;
+Some more minor niggles:
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Touch screen can require a few prods to work.&lt;/li&gt;
+&lt;li&gt;Some button actions not very intuitive: you have to work out which of the
+small buttons on the side you need to long press for 3 seconds to toggle the wifi.&lt;/li&gt;
+&lt;li&gt;Some of the included mounts and brackets are a bit fragile. You probably need
+to buy some decent ones if you use them on a regular basis. I snapped one
+bracket the second time I used it.&lt;/li&gt;
+&lt;li&gt;Some people complain about whining on the audio when the screen is turned
+on. I haven't noticed this, but I don't really need to record audio.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+&lt;a href="https://amzn.to/2CM9sBe"&gt;https://amzn.to/2CM9sBe&lt;/a&gt;
+&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2019-03-29-firefly-8SE-action-camera/</guid><pubDate>Fri, 29 Mar 2019 14:59:22 GMT</pubDate></item><item><title>Amazon Smart Plugs.</title><link>https://ianbarton.net/posts/2019-03-10-amazon-smart-plugs/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
 &lt;b&gt; &lt;a href="https://ianbarton.net/images/amazon_smart_plug.jpg" class="rounded
 float-left" alt="Amazon smart plug"&gt;&lt;img src="https://ianbarton.net/images/amazon_smart_plug.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/b&gt;
 &lt;/p&gt;
@@ -116,9 +195,9 @@ For full details about creating mp4 files from individual JPEGs, slowing down
 the video and adding an audio track see my blog post at:
 &lt;/p&gt;
 
-&lt;div id="outline-container-org44ff15a" class="outline-2"&gt;
-&lt;h2 id="org44ff15a"&gt;Concatenating JPEG Files Into an mp4 File.&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org44ff15a"&gt;
+&lt;div id="outline-container-org14f916e" class="outline-2"&gt;
+&lt;h2 id="org14f916e"&gt;Concatenating JPEG Files Into an mp4 File.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org14f916e"&gt;
 &lt;p&gt;
 Tools required:
 &lt;/p&gt;
@@ -137,19 +216,25 @@ command line option:
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  ffmpeg -start_number n -i test_%d.jpg -vcodec mpeg4 test.mp4
+&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+G0010024.JPG
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  ffmpeg  -start_number 10024 -i G00%d.JPG   -vcodec mpeg4 test.mp4
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
 Note, this will work as long as the sequence is unbroken once it starts. If
 there are gaps and you want all of the stills included, then renumbering may be
 necessary to fill the gaps.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc3ece9a" class="outline-3"&gt;
-&lt;h3 id="orgc3ece9a"&gt;GoPro ffmpeg Command Line.&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc3ece9a"&gt;
+&lt;div id="outline-container-org3bd4cb1" class="outline-3"&gt;
+&lt;h3 id="org3bd4cb1"&gt;GoPro ffmpeg Command Line.&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3bd4cb1"&gt;
 &lt;p&gt;
 This is the script I use with my GoPro. It creates a 1080p file from a JPEG. The %d is a placeholder for a number, so
 files starting from G0017096.JPG will be concatenated to make the video.
@@ -161,9 +246,9 @@ files starting from G0017096.JPG will be concatenated to make the video.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2cd27d2" class="outline-2"&gt;
-&lt;h2 id="org2cd27d2"&gt;Using mencoder to Create a "Slow" Version of the Video.&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2cd27d2"&gt;
+&lt;div id="outline-container-org60e2a32" class="outline-2"&gt;
+&lt;h2 id="org60e2a32"&gt;Using mencoder to Create a "Slow" Version of the Video.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org60e2a32"&gt;
 &lt;p&gt;
 This example slows the video down by 50% at 25 frames per second.
 &lt;/p&gt;
@@ -172,9 +257,9 @@ This example slows the video down by 50% at 25 frames per second.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orge8c7cf3" class="outline-2"&gt;
-&lt;h2 id="orge8c7cf3"&gt;Adding Background Music.&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge8c7cf3"&gt;
+&lt;div id="outline-container-org938e085" class="outline-2"&gt;
+&lt;h2 id="org938e085"&gt;Adding Background Music.&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org938e085"&gt;
 &lt;p&gt;
 There are several ways to do this. If your video is longer than the background
 music track, you probably want the music to loop until it reaches the end of
@@ -374,83 +459,4 @@ should use to power/recharge a particular bit of electronics.
 
 &lt;p&gt;
 &lt;a href="https://amzn.to/2Cf2IuE"&gt;Amazon link.&lt;/a&gt;
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-brother-p-labeller/</guid><pubDate>Thu, 15 Nov 2018 12:09:49 GMT</pubDate></item><item><title>Service Charges in Restaurants</title><link>https://ianbarton.net/posts/2018-11-15-service-charges-in-restaurants/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
-Service Charges in Restaurants.  If I go to a restaurant, rather than a self
-service cafe, I can't avoid "Service". It's a non optional part of the
-experience. As such the price should be built into the price of the meal. If I
-get crap service, I simply won't go back to the same place again.
-&lt;/p&gt;
-
-&lt;p&gt;
-I don't think any other part of the economy has such a strange idea of selling
-you something that includes a service element. If I take my car into the garage
-I don't expect to pay an extra 10% because the mechanic did their job properly.
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-service-charges-in-restaurants/</guid><pubDate>Thu, 15 Nov 2018 12:08:16 GMT</pubDate></item><item><title>Duronic Electric Hub</title><link>https://ianbarton.net/posts/2018-11-15-duronic-electric-hub/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
-&lt;b&gt; &lt;a href="https://ianbarton.net/images/duronic_hob.jpg" class="rounded float-left" alt="Thermos"&gt;&lt;img src="https://ianbarton.net/images/duronic_hob.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-A recent problem with our Aga means that we are without heating in the kitchen,
-clothes dryer, hot water and the ability to cook anything except by using the
-microwave. It will probably be out of action for a week or so while I run some
-new copper pipe and move the control box.
-&lt;/p&gt;
-
-&lt;p&gt;
-The Duronic Electric Hob has two different sized rings and seems reliable so
-far. It's easy to clean and powerful enough to heat things rapidly. I think
-it's pasta with everything until the Aga is fixed:)
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;a href="https://amzn.to/2ABA5rz"&gt;Amazon link&lt;/a&gt;
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-duronic-electric-hub/</guid><pubDate>Thu, 15 Nov 2018 12:06:58 GMT</pubDate></item><item><title>Citibikes Vienna</title><link>https://ianbarton.net/posts/2018-11-15-citibikes-vienna/</link><dc:creator>Ian Barton.</dc:creator><description>&lt;p&gt;
-A few years ago I tried to hire a couple of Boris Bikes in London with my
-son. Despite help from an Official Assistant, we were unable to unlock two
-bikes at once. So Boris you owe me £15, which with late payment charges and
-interest comes to just over £10,000.
-&lt;/p&gt;
-
-&lt;p&gt;
-Citibikes in Vienna is much better! There are various apps which show you the
-location of all the docking stations and the number of bikes available at each
-one. You can do most of the preliminary registration stuff on the
-website. However, the final step of registering your debit card requires you to
-use one of the card readers at a bike station. Note for Monzo users, just tell
-the machine it's a credit card when registering.
-&lt;/p&gt;
-
-&lt;p&gt;
-Fees are very reasonable. The first hour is free and the second costs
-1EU. Vienna is pancake flat with lots of cycle lanes, so even occasional
-cyclists should be fine cycling around easy and safe.
-&lt;/p&gt;
-
-&lt;p&gt;
-However, the bikes are really heavy. They would probably survive a direct hit
-from an anti-tank missile. There is a single front brake, but the main braking
-is activated by back pedaling. If you are used to aligning your pedals when you
-mount the bike by sticking your foot under a pedal and back pedalling to get
-the pedal in the correct position, you can't do this on a Citibike.
-&lt;/p&gt;
-
-&lt;p&gt;
-There are three gears. However, the weight of the bike means that even on
-slight inclines you have to push hard in the lowest gear.
-&lt;/p&gt;
-
-&lt;p&gt;
-If you are a regular cyclist you will find the weight and braking system very
-annoying. On my 6.5k ride I averaged about 16kph. On a similar route with my
-normal road bike this would have been about 35kph.
-&lt;/p&gt;
-
-&lt;p&gt;
-In conclusion good bike for short rides (10-15 minutes) at a very reasonable
-price.
-&lt;/p&gt;
-
-
-&lt;p&gt;
-&lt;a href="https://www.citybikewien.at/en/"&gt;https://www.citybikewien.at/en/&lt;/a&gt;
-&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-citibikes-vienna/</guid><pubDate>Thu, 15 Nov 2018 12:05:35 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>whateverworks</category><guid>https://ianbarton.net/posts/2018-11-15-brother-p-labeller/</guid><pubDate>Thu, 15 Nov 2018 12:09:49 GMT</pubDate></item></channel></rss>
