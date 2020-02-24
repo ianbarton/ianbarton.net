@@ -1,0 +1,37 @@
+#+BEGIN_COMMENT
+.. title: Neewer Ultra Bright Mini LED Video Light
+.. slug: 2020-02-10-neewer-ultra-bright-mini-LED-video-light
+.. date: 2020-02-10 16:34:23 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/neewer_mini_led_lamp.jpg" class="rounded
+float-left"alt="Neewer mini LED light"><img src="/images/neewer_mini_led_lamp.thumbnail.jpg"></a>@@*
+
+I have been looking for a small LED light that can be mounted on a camera cold
+shoe to use with my GoPro. I mostly use it to illuminate small objects in front
+of the camera, but you could also put it on a mini tripod instead of mounting
+directly on the camera. I already have a larger Neewer LED light and have been
+very satisfied with it. At the moment this mini light costs £9.99 on Amazon.
+
+This small light comes with a standard quarter inch thread on the bottom and a
+cold shoe, so it can be attached to most cameras that have a hot shoe adaptor,
+or anything like a tripod that has a quarter inch screw mount. All four sides
+have slots for cold shoe adaptors and you can use these to link panels
+together, creating a bigger light array. The unit I ave comes fitted with a
+diffuser panel in front of the LED's.
+
+The light requires two AA batteries (not supplied) to power it. The on/off
+switch also acts as a dimmer. The LED's output daylight balanced light at 6000K
+It only weighs around 100g, so you won't notice the weight in your gadget
+bag. The light is available with 36, 49 and 81 LED's. The angle of illumination
+is around 60 degrees. I have the 49 LED version, which is small enough to fit
+into most pockets. I don't know what the battery life is, but since it uses AA
+cells you can always carry around a couple of spares in case you run out of
+power.
+
+[[https://www.amazon.co.uk/gp/product/B07Y9XNCPF/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&th=1][Amazon link]]
