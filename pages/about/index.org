@@ -12,3 +12,6 @@
 This site is for my various thoughts about the tech. I use. I have also
 imported all my Google Plus posts from the Whatever Works Group. You can now
 find Whatever Works on [[https://mewe.com/group/5bbc4aa3a5f4e532eb54fcb4][MeWe]]
+
+This web site is hosted on Github. You can see the source and assets for the
+site on [[https://github.com/ianbarton/ianbarton.net][Github]].

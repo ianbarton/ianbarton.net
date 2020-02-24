@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://ianbarton.net/</loc>
-  <lastmod>2020-02-10T17:58:00Z</lastmod>
+  <lastmod>2020-02-24T17:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/2017/</loc>
@@ -84,10 +84,6 @@
  <url>
   <loc>https://ianbarton.net/index-6.html</loc>
   <lastmod>2020-02-11T10:07:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ianbarton.net/index-7.html</loc>
-  <lastmod>2020-02-10T17:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://ianbarton.net/pages/about/</loc>
