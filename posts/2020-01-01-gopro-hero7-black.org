@@ -1,0 +1,11 @@
+#+BEGIN_COMMENT
+.. title: GoPro Hero7 Black.
+.. slug: 2020-01-01-gopro-hero7-black
+.. date: 2020-01-01 13:18:21 GMT
+.. tags: whateverworks
+.. category:
+.. status: draft
+.. link:
+.. description
+.. type: text
+#+END_COMMENT
