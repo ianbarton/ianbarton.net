@@ -1,0 +1,30 @@
+#+BEGIN_COMMENT
+.. title: LED Fluorescent Lights
+.. slug: 2020-02-10-led-fluorescent-lights
+.. date: 2020-02-10 13:18:21 GMT
+.. tags: whateverworks
+.. category:
+.. link:
+'' status: draft
+.. description
+.. type: text
+#+END_COMMENT
+
+*@@html: <a href="/images/amazon_led_tube.jpg" class="rounded
+float-left"alt="LED strip light"><img src="/images/amazon_led_tube.thumbnail.jpg"></a>@@*
+
+
+We have a lot of old fluorescent tubes in outside buildings. The fittings for
+most of these are decades old and really need replacing. I have bought a couple
+of these LED fittings to see if we can use them as replacements. The one linked
+is a direct replacement for a 5ft tube.
+
+They have a three-year warranty and subjectively the level of illumination is
+much better than the equivalent tube. Claimed electricity consumption (not
+checked yet) is less than the 90W tubes they are replacing. An important factor
+if you have nearly a hundred of the old ones!
+
+Unlike the old tubes, which struggle to start if they are old, or it's cold
+these come on instantly.
+
+[[https://www.amazon.co.uk/gp/product/B075H16XR2/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1][Amazon link]]
